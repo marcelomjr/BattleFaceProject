@@ -1,0 +1,6 @@
+framework module Pods_SnapchatCameraTests {
+  umbrella header "Pods-SnapchatCameraTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

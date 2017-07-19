@@ -1,0 +1,678 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52F0EA7D4DAAF6E8A144095B /* Pods_SnapchatCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAFC7BC5267EC3B3640754 /* Pods_SnapchatCamera.framework */; };
+		9C0371B71F15736900E57048 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0371B61F15736900E57048 /* UserData.swift */; };
+		9C0371B91F164A2E00E57048 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0371B81F164A2E00E57048 /* Log.swift */; };
+		9C0B988D1F127F9A00375C08 /* FirebaseLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B988C1F127F9A00375C08 /* FirebaseLib.swift */; };
+		9C3360BB1F192705006EBDFF /* PhotoDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3360BA1F192705006EBDFF /* PhotoDestinationViewController.swift */; };
+		9C5218F21F0C249A00D2D201 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C5218F11F0C249A00D2D201 /* GoogleService-Info.plist */; };
+		A20F4DF31F1515C00037EB24 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20F4DEF1F1515C00037EB24 /* LoginScreen.storyboard */; };
+		A20F4DF41F1515C00037EB24 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4DF01F1515C00037EB24 /* LoginScreenViewController.swift */; };
+		A20F4DF51F1515C00037EB24 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4DF11F1515C00037EB24 /* RegisterViewController.swift */; };
+		A20F4DF61F1515C00037EB24 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4DF21F1515C00037EB24 /* LoginViewController.swift */; };
+		A20F4DFA1F1516750037EB24 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20F4DF71F1516750037EB24 /* Images.xcassets */; };
+		A20F4DFB1F1516750037EB24 /* pp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A20F4DF81F1516750037EB24 /* pp.jpg */; };
+		A20F4DFC1F1516750037EB24 /* battlelines.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A20F4DF91F1516750037EB24 /* battlelines.ttf */; };
+		A20F4DFE1F1517960037EB24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20F4DFD1F1517960037EB24 /* Main.storyboard */; };
+		A20F4E001F1517C30037EB24 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4DFF1F1517C30037EB24 /* CameraViewController.swift */; };
+		A20F4E031F1517DB0037EB24 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4E011F1517DB0037EB24 /* TabBarViewController.swift */; };
+		A20F4E041F1517DB0037EB24 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4E021F1517DB0037EB24 /* NavigationViewController.swift */; };
+		A22030B81F1549760071E708 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22030B71F1549760071E708 /* ProfileViewController.swift */; };
+		A22030BC1F154A080071E708 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22030B91F154A080071E708 /* ImageCollectionViewCell.swift */; };
+		A22030BD1F154A080071E708 /* CustomImageFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22030BA1F154A080071E708 /* CustomImageFlowLayout.swift */; };
+		A25712081F0ECA3E0001376E /* BattlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25712071F0ECA3E0001376E /* BattlesViewController.swift */; };
+		A257120C1F0ECA6E0001376E /* JudgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A257120B1F0ECA6E0001376E /* JudgeViewController.swift */; };
+		A257120E1F0ECA840001376E /* PublicBattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A257120D1F0ECA840001376E /* PublicBattleViewController.swift */; };
+		A2FDAB871F1DAC1700FE17E8 /* headerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDAB861F1DAC1700FE17E8 /* headerView.swift */; };
+		AC94AD611B8E40BF002D9AD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94AD601B8E40BF002D9AD2 /* AppDelegate.swift */; };
+		AC94AD6B1B8E40BF002D9AD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC94AD691B8E40BF002D9AD2 /* LaunchScreen.xib */; };
+		E652A2AC1F193DEF00522311 /* JudgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E652A2AB1F193DEF00522311 /* JudgeTableViewCell.swift */; };
+		E6DBCE3B1F193A500085E91F /* BattleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DBCE3A1F193A500085E91F /* BattleTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC94AD711B8E40BF002D9AD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC94AD531B8E40BF002D9AD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC94AD5A1B8E40BF002D9AD2;
+			remoteInfo = SnapchatCamera;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4E3AC7818B4C18573DD65E8A /* Pods-SnapchatCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapchatCamera.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapchatCamera/Pods-SnapchatCamera.release.xcconfig"; sourceTree = "<group>"; };
+		97BAFC7BC5267EC3B3640754 /* Pods_SnapchatCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapchatCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C0371B61F15736900E57048 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		9C0371B81F164A2E00E57048 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		9C0B988C1F127F9A00375C08 /* FirebaseLib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseLib.swift; sourceTree = "<group>"; };
+		9C3360BA1F192705006EBDFF /* PhotoDestinationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDestinationViewController.swift; sourceTree = "<group>"; };
+		9C5218F11F0C249A00D2D201 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A20F4DEF1F1515C00037EB24 /* LoginScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
+		A20F4DF01F1515C00037EB24 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		A20F4DF11F1515C00037EB24 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A20F4DF21F1515C00037EB24 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A20F4DF71F1516750037EB24 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A20F4DF81F1516750037EB24 /* pp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pp.jpg; sourceTree = "<group>"; };
+		A20F4DF91F1516750037EB24 /* battlelines.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = battlelines.ttf; sourceTree = "<group>"; };
+		A20F4DFD1F1517960037EB24 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A20F4DFF1F1517C30037EB24 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		A20F4E011F1517DB0037EB24 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		A20F4E021F1517DB0037EB24 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		A22030B71F1549760071E708 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A22030B91F154A080071E708 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		A22030BA1F154A080071E708 /* CustomImageFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageFlowLayout.swift; sourceTree = "<group>"; };
+		A25712071F0ECA3E0001376E /* BattlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattlesViewController.swift; sourceTree = "<group>"; };
+		A257120B1F0ECA6E0001376E /* JudgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JudgeViewController.swift; sourceTree = "<group>"; };
+		A257120D1F0ECA840001376E /* PublicBattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicBattleViewController.swift; sourceTree = "<group>"; };
+		A2FDAB861F1DAC1700FE17E8 /* headerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = headerView.swift; sourceTree = "<group>"; };
+		AC94AD5B1B8E40BF002D9AD2 /* BattleFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BattleFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC94AD5F1B8E40BF002D9AD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC94AD601B8E40BF002D9AD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC94AD6A1B8E40BF002D9AD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AC94AD701B8E40BF002D9AD2 /* BattleFaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleFaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFAD04149ED2DB307172CA51 /* Pods-SnapchatCameraTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapchatCameraTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapchatCameraTests/Pods-SnapchatCameraTests.release.xcconfig"; sourceTree = "<group>"; };
+		E652A2AB1F193DEF00522311 /* JudgeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JudgeTableViewCell.swift; sourceTree = "<group>"; };
+		E6DBCE3A1F193A500085E91F /* BattleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleTableViewCell.swift; sourceTree = "<group>"; };
+		E999D9EA3C71D2FABB11C6A4 /* Pods-SnapchatCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapchatCamera.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapchatCamera/Pods-SnapchatCamera.debug.xcconfig"; sourceTree = "<group>"; };
+		F5C898228B713F4BD5DCAA07 /* Pods-SnapchatCameraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapchatCameraTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapchatCameraTests/Pods-SnapchatCameraTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC94AD581B8E40BF002D9AD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52F0EA7D4DAAF6E8A144095B /* Pods_SnapchatCamera.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC94AD6D1B8E40BF002D9AD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		793E4C1A027FF7C6BCF3A317 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E999D9EA3C71D2FABB11C6A4 /* Pods-SnapchatCamera.debug.xcconfig */,
+				4E3AC7818B4C18573DD65E8A /* Pods-SnapchatCamera.release.xcconfig */,
+				F5C898228B713F4BD5DCAA07 /* Pods-SnapchatCameraTests.debug.xcconfig */,
+				BFAD04149ED2DB307172CA51 /* Pods-SnapchatCameraTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9C0371B51F15528600E57048 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9C0B988B1F127F6C00375C08 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C0B988C1F127F9A00375C08 /* FirebaseLib.swift */,
+				9C0371B61F15736900E57048 /* UserData.swift */,
+				9C0371B81F164A2E00E57048 /* Log.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9C3360BC1F19270F006EBDFF /* CameraScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9C3360BA1F192705006EBDFF /* PhotoDestinationViewController.swift */,
+				A20F4DFF1F1517C30037EB24 /* CameraViewController.swift */,
+			);
+			name = CameraScreen;
+			sourceTree = "<group>";
+		};
+		9C5523FB1F057F4D00EB312C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C3360BC1F19270F006EBDFF /* CameraScreen */,
+				A2F601001F10144F00C55E52 /* Login */,
+				A2FDAB861F1DAC1700FE17E8 /* headerView.swift */,
+				A22030B91F154A080071E708 /* ImageCollectionViewCell.swift */,
+				A22030BA1F154A080071E708 /* CustomImageFlowLayout.swift */,
+				A25712071F0ECA3E0001376E /* BattlesViewController.swift */,
+				E6DBCE3A1F193A500085E91F /* BattleTableViewCell.swift */,
+				A20F4E011F1517DB0037EB24 /* TabBarViewController.swift */,
+				A22030B71F1549760071E708 /* ProfileViewController.swift */,
+				A20F4E021F1517DB0037EB24 /* NavigationViewController.swift */,
+				A257120B1F0ECA6E0001376E /* JudgeViewController.swift */,
+				E652A2AB1F193DEF00522311 /* JudgeTableViewCell.swift */,
+				A257120D1F0ECA840001376E /* PublicBattleViewController.swift */,
+				A20F4DFD1F1517960037EB24 /* Main.storyboard */,
+				AC94AD691B8E40BF002D9AD2 /* LaunchScreen.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A2F601001F10144F00C55E52 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A20F4DEF1F1515C00037EB24 /* LoginScreen.storyboard */,
+				A20F4DF01F1515C00037EB24 /* LoginScreenViewController.swift */,
+				A20F4DF11F1515C00037EB24 /* RegisterViewController.swift */,
+				A20F4DF21F1515C00037EB24 /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		AC94AD521B8E40BF002D9AD2 = {
+			isa = PBXGroup;
+			children = (
+				AC94AD5D1B8E40BF002D9AD2 /* SnapchatCamera */,
+				AC94AD5C1B8E40BF002D9AD2 /* Products */,
+				793E4C1A027FF7C6BCF3A317 /* Pods */,
+				F2EA16D70BA43F972CAD2911 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AC94AD5C1B8E40BF002D9AD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC94AD5B1B8E40BF002D9AD2 /* BattleFace.app */,
+				AC94AD701B8E40BF002D9AD2 /* BattleFaceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC94AD5D1B8E40BF002D9AD2 /* SnapchatCamera */ = {
+			isa = PBXGroup;
+			children = (
+				AC94AD601B8E40BF002D9AD2 /* AppDelegate.swift */,
+				9C0B988B1F127F6C00375C08 /* Model */,
+				9C0371B51F15528600E57048 /* Controller */,
+				9C5523FB1F057F4D00EB312C /* View */,
+				AC94AD5E1B8E40BF002D9AD2 /* Supporting Files */,
+			);
+			path = SnapchatCamera;
+			sourceTree = "<group>";
+		};
+		AC94AD5E1B8E40BF002D9AD2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A20F4DF71F1516750037EB24 /* Images.xcassets */,
+				A20F4DF81F1516750037EB24 /* pp.jpg */,
+				A20F4DF91F1516750037EB24 /* battlelines.ttf */,
+				AC94AD5F1B8E40BF002D9AD2 /* Info.plist */,
+				9C5218F11F0C249A00D2D201 /* GoogleService-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2EA16D70BA43F972CAD2911 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97BAFC7BC5267EC3B3640754 /* Pods_SnapchatCamera.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC94AD5A1B8E40BF002D9AD2 /* BattleFace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC94AD7A1B8E40BF002D9AD2 /* Build configuration list for PBXNativeTarget "BattleFace" */;
+			buildPhases = (
+				EC1E21CABCBF9916A5056C07 /* [CP] Check Pods Manifest.lock */,
+				AC94AD571B8E40BF002D9AD2 /* Sources */,
+				AC94AD581B8E40BF002D9AD2 /* Frameworks */,
+				AC94AD591B8E40BF002D9AD2 /* Resources */,
+				54BB3AB515A69C310FC4B123 /* [CP] Embed Pods Frameworks */,
+				7C96A20FD7893E98201DD5E0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BattleFace;
+			productName = SnapchatCamera;
+			productReference = AC94AD5B1B8E40BF002D9AD2 /* BattleFace.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC94AD6F1B8E40BF002D9AD2 /* BattleFaceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC94AD7D1B8E40BF002D9AD2 /* Build configuration list for PBXNativeTarget "BattleFaceTests" */;
+			buildPhases = (
+				224B3733BB2E803DE6B4C29F /* [CP] Check Pods Manifest.lock */,
+				AC94AD6C1B8E40BF002D9AD2 /* Sources */,
+				AC94AD6D1B8E40BF002D9AD2 /* Frameworks */,
+				AC94AD6E1B8E40BF002D9AD2 /* Resources */,
+				292612BDE2E34D2E2AA25D42 /* [CP] Embed Pods Frameworks */,
+				EE65BDD4922D588A82779ED1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC94AD721B8E40BF002D9AD2 /* PBXTargetDependency */,
+			);
+			name = BattleFaceTests;
+			productName = SnapchatCameraTests;
+			productReference = AC94AD701B8E40BF002D9AD2 /* BattleFaceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC94AD531B8E40BF002D9AD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Archetapp;
+				TargetAttributes = {
+					AC94AD5A1B8E40BF002D9AD2 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = J5KQYDNX5E;
+						LastSwiftMigration = 0830;
+					};
+					AC94AD6F1B8E40BF002D9AD2 = {
+						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0830;
+						TestTargetID = AC94AD5A1B8E40BF002D9AD2;
+					};
+				};
+			};
+			buildConfigurationList = AC94AD561B8E40BF002D9AD2 /* Build configuration list for PBXProject "BattleFace" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC94AD521B8E40BF002D9AD2;
+			productRefGroup = AC94AD5C1B8E40BF002D9AD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC94AD5A1B8E40BF002D9AD2 /* BattleFace */,
+				AC94AD6F1B8E40BF002D9AD2 /* BattleFaceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC94AD591B8E40BF002D9AD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A20F4DFE1F1517960037EB24 /* Main.storyboard in Resources */,
+				A20F4DFA1F1516750037EB24 /* Images.xcassets in Resources */,
+				9C5218F21F0C249A00D2D201 /* GoogleService-Info.plist in Resources */,
+				A20F4DFB1F1516750037EB24 /* pp.jpg in Resources */,
+				AC94AD6B1B8E40BF002D9AD2 /* LaunchScreen.xib in Resources */,
+				A20F4DF31F1515C00037EB24 /* LoginScreen.storyboard in Resources */,
+				A20F4DFC1F1516750037EB24 /* battlelines.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC94AD6E1B8E40BF002D9AD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		224B3733BB2E803DE6B4C29F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		292612BDE2E34D2E2AA25D42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapchatCameraTests/Pods-SnapchatCameraTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54BB3AB515A69C310FC4B123 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapchatCamera/Pods-SnapchatCamera-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C96A20FD7893E98201DD5E0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapchatCamera/Pods-SnapchatCamera-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC1E21CABCBF9916A5056C07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EE65BDD4922D588A82779ED1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapchatCameraTests/Pods-SnapchatCameraTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC94AD571B8E40BF002D9AD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A20F4E001F1517C30037EB24 /* CameraViewController.swift in Sources */,
+				9C0371B91F164A2E00E57048 /* Log.swift in Sources */,
+				A20F4E041F1517DB0037EB24 /* NavigationViewController.swift in Sources */,
+				E6DBCE3B1F193A500085E91F /* BattleTableViewCell.swift in Sources */,
+				E652A2AC1F193DEF00522311 /* JudgeTableViewCell.swift in Sources */,
+				A20F4DF51F1515C00037EB24 /* RegisterViewController.swift in Sources */,
+				9C3360BB1F192705006EBDFF /* PhotoDestinationViewController.swift in Sources */,
+				A20F4E031F1517DB0037EB24 /* TabBarViewController.swift in Sources */,
+				A20F4DF41F1515C00037EB24 /* LoginScreenViewController.swift in Sources */,
+				9C0B988D1F127F9A00375C08 /* FirebaseLib.swift in Sources */,
+				A257120E1F0ECA840001376E /* PublicBattleViewController.swift in Sources */,
+				A257120C1F0ECA6E0001376E /* JudgeViewController.swift in Sources */,
+				A22030BD1F154A080071E708 /* CustomImageFlowLayout.swift in Sources */,
+				A25712081F0ECA3E0001376E /* BattlesViewController.swift in Sources */,
+				A22030BC1F154A080071E708 /* ImageCollectionViewCell.swift in Sources */,
+				9C0371B71F15736900E57048 /* UserData.swift in Sources */,
+				A2FDAB871F1DAC1700FE17E8 /* headerView.swift in Sources */,
+				A22030B81F1549760071E708 /* ProfileViewController.swift in Sources */,
+				AC94AD611B8E40BF002D9AD2 /* AppDelegate.swift in Sources */,
+				A20F4DF61F1515C00037EB24 /* LoginViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC94AD6C1B8E40BF002D9AD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC94AD721B8E40BF002D9AD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC94AD5A1B8E40BF002D9AD2 /* BattleFace */;
+			targetProxy = AC94AD711B8E40BF002D9AD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC94AD691B8E40BF002D9AD2 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC94AD6A1B8E40BF002D9AD2 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC94AD781B8E40BF002D9AD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC94AD791B8E40BF002D9AD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC94AD7B1B8E40BF002D9AD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E999D9EA3C71D2FABB11C6A4 /* Pods-SnapchatCamera.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J5KQYDNX5E;
+				INFOPLIST_FILE = SnapchatCamera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Mango.Joy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AC94AD7C1B8E40BF002D9AD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E3AC7818B4C18573DD65E8A /* Pods-SnapchatCamera.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J5KQYDNX5E;
+				INFOPLIST_FILE = SnapchatCamera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Mango.Joy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		AC94AD7E1B8E40BF002D9AD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5C898228B713F4BD5DCAA07 /* Pods-SnapchatCameraTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SnapchatCameraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Archetapp.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BattleFace.app/BattleFace";
+			};
+			name = Debug;
+		};
+		AC94AD7F1B8E40BF002D9AD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFAD04149ED2DB307172CA51 /* Pods-SnapchatCameraTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SnapchatCameraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Archetapp.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BattleFace.app/BattleFace";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC94AD561B8E40BF002D9AD2 /* Build configuration list for PBXProject "BattleFace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC94AD781B8E40BF002D9AD2 /* Debug */,
+				AC94AD791B8E40BF002D9AD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC94AD7A1B8E40BF002D9AD2 /* Build configuration list for PBXNativeTarget "BattleFace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC94AD7B1B8E40BF002D9AD2 /* Debug */,
+				AC94AD7C1B8E40BF002D9AD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC94AD7D1B8E40BF002D9AD2 /* Build configuration list for PBXNativeTarget "BattleFaceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC94AD7E1B8E40BF002D9AD2 /* Debug */,
+				AC94AD7F1B8E40BF002D9AD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC94AD531B8E40BF002D9AD2 /* Project object */;
+}
