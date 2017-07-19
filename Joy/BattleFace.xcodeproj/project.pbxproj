@@ -14,6 +14,7 @@
 		9C3360BB1F192705006EBDFF /* PhotoDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3360BA1F192705006EBDFF /* PhotoDestinationViewController.swift */; };
 		9C5218F21F0C249A00D2D201 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C5218F11F0C249A00D2D201 /* GoogleService-Info.plist */; };
 		9C81F16A1F1F23CC003C510D /* Invitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81F1691F1F23CC003C510D /* Invitation.swift */; };
+		9CA17E711F1F7E3900DC8FF3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA17E701F1F7E3900DC8FF3 /* ProfileViewController.swift */; };
 		A20F4DF31F1515C00037EB24 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20F4DEF1F1515C00037EB24 /* LoginScreen.storyboard */; };
 		A20F4DF41F1515C00037EB24 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4DF01F1515C00037EB24 /* LoginScreenViewController.swift */; };
 		A20F4DF51F1515C00037EB24 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4DF11F1515C00037EB24 /* RegisterViewController.swift */; };
@@ -25,13 +26,12 @@
 		A20F4E001F1517C30037EB24 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4DFF1F1517C30037EB24 /* CameraViewController.swift */; };
 		A20F4E031F1517DB0037EB24 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4E011F1517DB0037EB24 /* TabBarViewController.swift */; };
 		A20F4E041F1517DB0037EB24 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4E021F1517DB0037EB24 /* NavigationViewController.swift */; };
-		A22030B81F1549760071E708 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22030B71F1549760071E708 /* ProfileViewController.swift */; };
+		A22030B81F1549760071E708 /* ProfileViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22030B71F1549760071E708 /* ProfileViewController2.swift */; };
 		A22030BC1F154A080071E708 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22030B91F154A080071E708 /* ImageCollectionViewCell.swift */; };
 		A22030BD1F154A080071E708 /* CustomImageFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22030BA1F154A080071E708 /* CustomImageFlowLayout.swift */; };
 		A25712081F0ECA3E0001376E /* BattlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25712071F0ECA3E0001376E /* BattlesViewController.swift */; };
 		A257120C1F0ECA6E0001376E /* JudgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A257120B1F0ECA6E0001376E /* JudgeViewController.swift */; };
 		A257120E1F0ECA840001376E /* PublicBattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A257120D1F0ECA840001376E /* PublicBattleViewController.swift */; };
-		A2FDAB871F1DAC1700FE17E8 /* headerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDAB861F1DAC1700FE17E8 /* headerView.swift */; };
 		AC94AD611B8E40BF002D9AD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94AD601B8E40BF002D9AD2 /* AppDelegate.swift */; };
 		AC94AD6B1B8E40BF002D9AD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC94AD691B8E40BF002D9AD2 /* LaunchScreen.xib */; };
 		E652A2AC1F193DEF00522311 /* JudgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E652A2AB1F193DEF00522311 /* JudgeTableViewCell.swift */; };
@@ -57,6 +57,7 @@
 		9C3360BA1F192705006EBDFF /* PhotoDestinationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDestinationViewController.swift; sourceTree = "<group>"; };
 		9C5218F11F0C249A00D2D201 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C81F1691F1F23CC003C510D /* Invitation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invitation.swift; sourceTree = "<group>"; };
+		9CA17E701F1F7E3900DC8FF3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A20F4DEF1F1515C00037EB24 /* LoginScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
 		A20F4DF01F1515C00037EB24 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		A20F4DF11F1515C00037EB24 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -68,13 +69,12 @@
 		A20F4DFF1F1517C30037EB24 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		A20F4E011F1517DB0037EB24 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A20F4E021F1517DB0037EB24 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
-		A22030B71F1549760071E708 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A22030B71F1549760071E708 /* ProfileViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController2.swift; sourceTree = "<group>"; };
 		A22030B91F154A080071E708 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		A22030BA1F154A080071E708 /* CustomImageFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageFlowLayout.swift; sourceTree = "<group>"; };
 		A25712071F0ECA3E0001376E /* BattlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattlesViewController.swift; sourceTree = "<group>"; };
 		A257120B1F0ECA6E0001376E /* JudgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JudgeViewController.swift; sourceTree = "<group>"; };
 		A257120D1F0ECA840001376E /* PublicBattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicBattleViewController.swift; sourceTree = "<group>"; };
-		A2FDAB861F1DAC1700FE17E8 /* headerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = headerView.swift; sourceTree = "<group>"; };
 		AC94AD5B1B8E40BF002D9AD2 /* BattleFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BattleFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC94AD5F1B8E40BF002D9AD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC94AD601B8E40BF002D9AD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,15 +147,12 @@
 		9C5523FB1F057F4D00EB312C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9CA17E6D1F1F756300DC8FF3 /* Profile */,
 				9C3360BC1F19270F006EBDFF /* CameraScreen */,
 				A2F601001F10144F00C55E52 /* Login */,
-				A2FDAB861F1DAC1700FE17E8 /* headerView.swift */,
-				A22030B91F154A080071E708 /* ImageCollectionViewCell.swift */,
-				A22030BA1F154A080071E708 /* CustomImageFlowLayout.swift */,
 				A25712071F0ECA3E0001376E /* BattlesViewController.swift */,
 				E6DBCE3A1F193A500085E91F /* BattleTableViewCell.swift */,
 				A20F4E011F1517DB0037EB24 /* TabBarViewController.swift */,
-				A22030B71F1549760071E708 /* ProfileViewController.swift */,
 				A20F4E021F1517DB0037EB24 /* NavigationViewController.swift */,
 				A257120B1F0ECA6E0001376E /* JudgeViewController.swift */,
 				E652A2AB1F193DEF00522311 /* JudgeTableViewCell.swift */,
@@ -164,6 +161,17 @@
 				AC94AD691B8E40BF002D9AD2 /* LaunchScreen.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		9CA17E6D1F1F756300DC8FF3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A22030B71F1549760071E708 /* ProfileViewController2.swift */,
+				9CA17E701F1F7E3900DC8FF3 /* ProfileViewController.swift */,
+				A22030B91F154A080071E708 /* ImageCollectionViewCell.swift */,
+				A22030BA1F154A080071E708 /* CustomImageFlowLayout.swift */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 		A2F601001F10144F00C55E52 /* Login */ = {
@@ -448,11 +456,11 @@
 				A257120C1F0ECA6E0001376E /* JudgeViewController.swift in Sources */,
 				A22030BD1F154A080071E708 /* CustomImageFlowLayout.swift in Sources */,
 				A25712081F0ECA3E0001376E /* BattlesViewController.swift in Sources */,
+				9CA17E711F1F7E3900DC8FF3 /* ProfileViewController.swift in Sources */,
 				A22030BC1F154A080071E708 /* ImageCollectionViewCell.swift in Sources */,
 				9C0371B71F15736900E57048 /* UserData.swift in Sources */,
-				A2FDAB871F1DAC1700FE17E8 /* headerView.swift in Sources */,
 				9C81F16A1F1F23CC003C510D /* Invitation.swift in Sources */,
-				A22030B81F1549760071E708 /* ProfileViewController.swift in Sources */,
+				A22030B81F1549760071E708 /* ProfileViewController2.swift in Sources */,
 				AC94AD611B8E40BF002D9AD2 /* AppDelegate.swift in Sources */,
 				A20F4DF61F1515C00037EB24 /* LoginViewController.swift in Sources */,
 			);
