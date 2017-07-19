@@ -29,7 +29,7 @@ class PublicBattlesViewController: UIViewController
                 self.label.text = username
                 
                 
-                FirebaseLib.getProfilePhoto(user: username!, completionHandler:
+                FirebaseLib.getProfilePhoto(completionHandler:
                     { (photo) in
                         self.image.image = photo
                         self.image.layer.masksToBounds = true

@@ -22,8 +22,14 @@ class FirebaseLib
         
     }
     
-    static func getProfilePhoto(user: String, completionHandler: @escaping (UIImage) -> Void)
+    static func getProfilePhoto(completionHandler: @escaping (UIImage?) -> Void)
     {
+        guard let user = self.username else
+        {
+            print("Username not found in this device!")
+            return
+        }
+        
         let path = "userPhotos/" + user + "/profilePhoto.jpg"
         
         self.downloadImage(reference: path)
@@ -37,7 +43,7 @@ class FirebaseLib
         }
         
     }
-    static func addPhoto(photoData: Data, completionHandler: @escaping (String) -> Void)
+    static func addPhoto(photoData: Data, completionHandler: @escaping (String?, String?) -> Void)
     {
         guard let user = self.username else
         {
@@ -55,7 +61,7 @@ class FirebaseLib
             {
                 DispatchQueue.main.async
                 {
-                        completionHandler("Error in the photosNumber")
+                        completionHandler(nil, "Error in the photosNumber")
                 }
                 return
             }
@@ -70,6 +76,8 @@ class FirebaseLib
                 ref.child("usersData/" + user + "/photosNumber").setValue(totalNumber)
                 ref.child("usersData").child(user).child("photos").childByAutoId().setValue(photoPath)
                 print("numero de fotos" + totalNumber)
+                completionHandler(photoPath, nil)
+
             }
         }
     }

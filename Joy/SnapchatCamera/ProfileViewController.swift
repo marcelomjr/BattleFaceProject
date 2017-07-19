@@ -10,11 +10,6 @@ import UIKit
 
 class ProfileViewController: UICollectionViewController
 {
-    
-
-
-//    @IBOutlet weak var profilePhotoView: UIImageView!
-//    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var photoCollection: UICollectionView!
     var username: String?
     
@@ -26,13 +21,12 @@ class ProfileViewController: UICollectionViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.setProfilePhoto()
         self.collectionViewPhotos = [UIImage]()
-        loadImages()
+       // loadImages()
         customImageFlowLayout = CustomImageFlowLayout()
         photoCollection.collectionViewLayout = customImageFlowLayout
         photoCollection.backgroundColor = .white
-        let data = FirebaseLib.getUserData(user: FirebaseLib.getUsername()!)
+        //let data = FirebaseLib.getUserData(user: FirebaseLib.getUsername()!)
     }
     
     func loadImages()
@@ -53,9 +47,6 @@ class ProfileViewController: UICollectionViewController
             
             self.photoCollection.reloadData()
         }
-
-        
-
     }
 
     @IBAction func reloadAction(_ sender: Any) {
@@ -93,27 +84,24 @@ class ProfileViewController: UICollectionViewController
     }
     
     // header config
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
+    {
         
         // define header
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "Header", for: indexPath) as! headerView
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "Header", for: indexPath) as! HeaderView
         
         
         header.activityIndicator.startAnimating()
-        
-            let userID = Log.getUserID()
-            FirebaseLib.getUsernameFromUserID(userID: userID!, completionHandler:
-                    { (username) in
-        
-                        if username != nil
-                        {
-                            FirebaseLib.getProfilePhoto(user: username!, completionHandler:
-                                { (photo) in
-                                    header.avaImg.image = photo
-                                    header.activityIndicator.stopAnimating()
-                            })
-                        }
-                })
+        FirebaseLib.getProfilePhoto(completionHandler:
+        { (profilePhoto) in
+            guard profilePhoto != nil else
+            {
+                print("Error")
+                return
+            }
+            header.avaImg.image = profilePhoto
+            header.activityIndicator.stopAnimating()
+        })
 
 
         return header

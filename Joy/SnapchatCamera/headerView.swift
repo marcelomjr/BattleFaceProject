@@ -10,7 +10,8 @@ import UIKit
 
 
 
-class headerView: UICollectionReusableView {
+class HeaderView: UICollectionReusableView
+{
     
     // UI objects
     @IBOutlet weak var avaImg: UIImageView!

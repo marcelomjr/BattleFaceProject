@@ -14,15 +14,20 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     @IBOutlet var cameraView: UIView!
     @IBOutlet var pickedImageView: UIImageView!
-
+    @IBOutlet var cameraButton: UIButton!
+    @IBOutlet var flashButton: UIButton!
+    @IBOutlet var captureButton: UIButton!
+    
     var captureSession = AVCaptureSession()
     var captureDevice: AVCaptureDevice?
     var previewLayer : AVCaptureVideoPreviewLayer?
     var stillImageOutput = AVCaptureStillImageOutput()
     var frontCamera: Bool = false
     var didtakePhoto = Bool()
+    var flashEnable: Bool = false
 
-    var photoTaked: UIImage?
+    var takenPhoto: UIImage?
+    
     
     override func viewWillAppear(_ animated: Bool)
     {
@@ -30,20 +35,24 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         self.navigationController?.navigationBar.isHidden = true
     }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
         captureSession.sessionPreset = AVCaptureSessionPresetPhoto
         frontCamera(frontCamera)
-        if captureDevice != nil { beginSession() }
-
-        // Do any additional setup after loading the view.
+        
+        if captureDevice != nil
+        {
+            beginSession()
+        }
     }
     
 
     
-    func beginSession() {
+    func beginSession()
+    {
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         self.cameraView.layer.addSublayer(previewLayer!)
         previewLayer?.frame = self.cameraView.layer.bounds
@@ -53,7 +62,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         if captureSession.canAddOutput(stillImageOutput) {captureSession.addOutput((stillImageOutput))}
     }
 
-    @IBOutlet var cameraButton: UIButton!
+ 
     func frontCamera(_ front: Bool){
         var icon = UIImage()
         let devices = AVCaptureDevice.devices()
@@ -83,20 +92,66 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         // Dispose of any resources that can be recreated.
     }
 
+    
 
-    @IBOutlet var flashButton: UIButton!
-    @IBAction func activateFlash(_ sender: UIButton) {
-        if captureDevice!.hasTorch{
-            do {try captureDevice!.lockForConfiguration()
-                var flashIcon = UIImage()
-                captureDevice!.torchMode = captureDevice!.isTorchActive ? AVCaptureTorchMode.off : AVCaptureTorchMode.on
-                if captureDevice!.isTorchActive{ flashIcon = #imageLiteral(resourceName: "Flash") as UIImage}
-                else { flashIcon = #imageLiteral(resourceName: "FlashSelected") as UIImage}
-                flashButton.setBackgroundImage(flashIcon, for: UIControlState.normal)
-                captureDevice!.unlockForConfiguration()
-            } catch { print ("error while trying to activate flash") }
+    
+    @IBAction func toggleFlash(_ sender: Any)
+    {
+        if self.flashEnable
+        {
+            self.flashEnable = false
+            let inactiveImage = #imageLiteral(resourceName: "Flash") as UIImage
+            self.flashButton.setBackgroundImage(inactiveImage, for: UIControlState.normal)
+            self.flashOff()
+        }
+        // Flash is off
+        else
+        {
+            self.flashEnable = true
+            let activeImage = #imageLiteral(resourceName: "FlashSelected") as UIImage
+            self.flashButton.setBackgroundImage(activeImage, for: UIControlState.normal)
+            flashOn()
         }
     }
+    func flashOff()
+    {
+        guard self.captureDevice!.hasTorch == true else
+        {
+            print("Erro>>>Explicar erro aqui")
+            return
+        }
+        
+        do
+        {
+            try captureDevice!.lockForConfiguration()
+            captureDevice!.flashMode = .off
+            captureDevice!.unlockForConfiguration()
+        }
+        catch
+        {
+            print ("error while trying to activate flash")
+        }
+    }
+    func flashOn()
+    {
+        guard self.captureDevice!.hasTorch == true else
+        {
+            print("Erro>>>Explicar erro aqui")
+            return
+        }
+        
+        do
+        {
+            try captureDevice!.lockForConfiguration()
+            captureDevice!.flashMode = .on
+            captureDevice!.unlockForConfiguration()
+        }
+        catch
+        {
+            print ("error while trying to activate flash")
+        }
+    }
+    
 
     @IBAction func setCamera(_ sender: UIButton) {
         //switch camera to frontal
@@ -110,8 +165,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
 
 
-    @IBOutlet var captureButton: UIButton!
-    @IBAction func startCapture(_ sender: UIButton) {
+    
+    
+    @IBAction func startCapture(_ sender: UIButton)
+    {
         captureAnotherPicture()
     }
 
@@ -119,18 +176,12 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         if let videoConnection = stillImageOutput.connection(withMediaType: AVMediaTypeVideo){
             stillImageOutput.captureStillImageAsynchronously(from: videoConnection, completionHandler: { (imageDataSampleBuffer, error) in
                     let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
-                     self.photoTaked = UIImage(data: imageData!)
+                
+                // save the photo in self.takenPhoto
+                self.takenPhoto = UIImage(data: imageData!)
 
-                    if let photoData = imageData
-                    {
-                        guard let user = FirebaseLib.getUsername() else
-                        {
-                            print("User not found")
-                            return
-                        }
-                    }
-            
-                    self.pickedImageView.image = self.photoTaked
+                                
+                    self.pickedImageView.image = self.takenPhoto
                     self.pickedImageView.isHidden = false
 
                     self.flashButton.isHidden = true
@@ -138,13 +189,15 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
                     self.flashButton.isEnabled = false
                     self.cameraButton.isEnabled = false
                 
-                    self.performSegue(withIdentifier: "CameraToPhotoDestination", sender: self)
+                    self.performSegue(withIdentifier: "CameraToPhotoDestination", sender: nil)
             })
         }
     }
 
-    func captureAnotherPicture(){
-        if didtakePhoto == true {
+    func captureAnotherPicture()
+    {
+        if didtakePhoto == true
+        {
             //self.previewPicture.pickedImage.isHidden = true
             self.pickedImageView.isHidden = true
 
@@ -153,11 +206,14 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             self.flashButton.isEnabled = true
             self.cameraButton.isEnabled = true
 
-            didtakePhoto = false}
-        else {
+            didtakePhoto = false
+        }
+        else
+        {
             captureSession.startRunning()
             didtakePhoto = true
-            capturePicture()}
+            capturePicture()
+        }
 
     }
 
@@ -167,15 +223,23 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
 
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
         if segue.identifier == "CameraToPhotoDestination"
         {
-            let nav = segue.destination as? NavigationViewController
-            let ph = nav?.viewControllers.first as? PhotoDestinationViewController
-            if ph != nil
+            let photoDestinationViewController = segue.destination as? PhotoDestinationViewController
+            
+            guard photoDestinationViewController != nil else
             {
-                ph?.photo = self.photoTaked!
+                print("Error fetching PhotoDestinationViewController!")
+                return
             }
+            guard self.takenPhoto != nil else
+            {
+                print("Error fetching photo!")
+                return
+            }
+            photoDestinationViewController!.takenPhoto = self.takenPhoto
         }
     }
 
