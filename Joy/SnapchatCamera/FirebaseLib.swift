@@ -34,11 +34,17 @@ class FirebaseLib
         
         self.downloadImage(reference: path)
         {
-            (profilePhoto) in
+            (error, profilePhoto) in
             
             DispatchQueue.main.async
             {
+                guard profilePhoto != nil else
+                {
+                    completionHandler(nil)
+                    return
+                }
                 completionHandler(profilePhoto)
+
             }
         }
         
@@ -109,7 +115,10 @@ class FirebaseLib
         }
     }
     
-    static func downloadImage(reference: String, completionHandler: @escaping (UIImage) -> Void)
+    /* This function downloads a photo from the server
+     * Returns a image or nil if there is an error
+     */
+    static func downloadImage(reference: String, completionHandler: @escaping (Error?, UIImage?) -> Void)
     {
 
         // Get a reference to the storage service using the default Firebase App
@@ -124,23 +133,29 @@ class FirebaseLib
         // Create a reference to the file you want to download
         let imageRef = storageRef.child(reference)
     
-        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-        imageRef.getData(maxSize: 10 * 1024 * 1024) { data, error in
-            if error != nil
+        // Download in memory with a maximum allowed size of 20 MB
+        imageRef.getData(maxSize: 10 * 1024 * 1024)
+        {
+            data, error in
+            DispatchQueue.main.async
             {
-                // Uh-oh, an error occurred!
-                print("deu erro")
-            }
-            else {
-                // Data for "images/island.jpg" is returned
-                let image = UIImage(data: data!)!
-                
-                DispatchQueue.main.async{
-                    completionHandler(image)
+                // Get the error if it exists
+                guard error == nil else
+                {
+                    print("deu erro")//////////////////////////////////////////////////
+                    completionHandler(error, nil)
+                    return
                 }
+                // Create the image
+                guard let image = UIImage(data: data!) else
+                {
+                    print("Error creating image from data")
+                    completionHandler(nil, nil)
+                    return
+                }
+                completionHandler(nil, image)
             }
         }
-    
     }
     
     static func downloadUserPhotos(completionHandler: @escaping ([UIImage]?) -> Void)
@@ -166,21 +181,32 @@ class FirebaseLib
                 print("Nenhuma referencia de foto encontrada")
                 return
             }
+            photosPath = photosPath.sorted()
             photos = [UIImage]()
+            
             for photoPath in photosPath
             {
                 
                 self.downloadImage(reference: photoPath, completionHandler:
                 { (photo) in
                     DispatchQueue.main.async
+                    {
+                        guard photo != nil else
                         {
-                            // ARRUMAR ORDENCAO
-                            //print("photoPath: \(photoPath)")
-                            photos?.append(photo)
-                            completionHandler(photos)
+                            
+                            return
+                        }
+                            print("photoPath: \(photoPath)")
+                           // photos?.append(photo!)/////////////////////////////////////////////////////////////
+                        
                     }
                 })
             }
+            DispatchQueue.main.async
+            {
+                completionHandler(photos)
+            }
+            
         })
     }
     static func getUsernameFromUserID(userID: String, completionHandler: @escaping (String?) -> Void)

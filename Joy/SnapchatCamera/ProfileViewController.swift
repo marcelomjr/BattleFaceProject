@@ -28,7 +28,8 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         
         customImageFlowLayout = CustomImageFlowLayout()
         photoCollection.collectionViewLayout = customImageFlowLayout
-        //photoCollection.backgroundColor = .white
+        
+        self.loadImages()
     }
     func profileSetup()
     {
@@ -61,11 +62,32 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     func loadImages()
     {
         print("load imagens")
-    
-        let im = UIImage(named: "WinColor")
-        self.images.append(im!)
         
-        self.photoCollection.reloadData()
+    
+//        FirebaseLib.downloadUserPhotos
+//        { (userPhotos) in
+//            guard userPhotos != nil else
+//            {
+//                print("Error! Photos doesn't found.")
+//                return
+//            }
+//            self.images.removeAll()
+//           for photo in 0 ..< userPhotos!.count
+//           {
+//                self.images.append(userPhotos![photo])
+//            }
+//        }
+
+        let path = "userPhotos/" + FirebaseLib.getUsername()! + "/photo2"
+        FirebaseLib.downloadImage(reference: path) {
+            (error, image1) in
+            if image1 != nil
+            {
+                self.images.append(image1!)
+                self.photoCollection.reloadData()
+            }
+        }
+        
 
     }
 
