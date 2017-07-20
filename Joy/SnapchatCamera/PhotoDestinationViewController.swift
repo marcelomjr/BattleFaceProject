@@ -16,20 +16,9 @@ class PhotoDestinationViewController: UIViewController
 
     @IBAction func postButton(_ sender: Any)
     {
-        guard takenPhotoView.image != nil else
-        {
-            print("Photo does not exist!! (nil)")
-            return
-        }
-        guard let photoData = UIImagePNGRepresentation(takenPhotoView.image!) else
-        {
-            print("Erro in convertion of image")
-            return
-        }
-        FirebaseLib.addPhoto(photoData: photoData, completionHandler: {_ in })
 
-        //self.dismiss(animated: true, completion: nil)
-
+        uploadPhoto()
+        
         performSegue(withIdentifier: "PhotoDestinationToProfile", sender: nil)
     }
 
@@ -61,15 +50,25 @@ class PhotoDestinationViewController: UIViewController
     
     func uploadPhoto()
     {
-//        if let photoData = imageData
-//        {
-//            guard let user = FirebaseLib.getUsername() else
-//            {
-//                print("User not found")
-//                return
-//            }
-//        }
-
+        guard let photoData = UIImagePNGRepresentation(self.takenPhotoView.image!) else
+        {
+            print("Error in convertion")
+            return
+        }
+        
+        
+        FirebaseLib.addPhoto(photoData: photoData)
+        { (photoPath, error) in
+            if photoPath != nil
+            {
+                // cria desafio
+            }
+            if error != nil
+            {
+                print(error)
+            }
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

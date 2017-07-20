@@ -242,15 +242,20 @@ class FirebaseLib
 
     
     
-    static func getUserData(user: String) ->UserData?
+    static func getUserData(completionHandler: @escaping (UserData?) -> Void)
     {
-        var userData: UserData?
+        
+        guard let user = self.getUsername() else
+        {
+            return
+        }
+        
         var ref: DatabaseReference!
         ref = Database.database().reference()
         
-        
-        print("vai obter dados")
-        ref.child("usersData").child(user).observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("usersData").child(user).observeSingleEvent(of: .value, with:
+        {
+            (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
             
@@ -258,12 +263,16 @@ class FirebaseLib
             let name = value?["name"] as? String ?? ""
             let age = value?["age"] as? String ?? ""
             
-            userData = UserData(username: user, account: account, name: name, age: age)
+            var userData: UserData? = UserData(username: user, account: account, name: name, age: age)
+    
+            DispatchQueue.main.async
+            {
+                completionHandler(userData)
+            }
             
         }) { (error) in
             print(error.localizedDescription)
         }
-        return userData
     }
     
     static func createUser(account: String, password: String, completionHandler: @escaping (String?, String) -> Void)

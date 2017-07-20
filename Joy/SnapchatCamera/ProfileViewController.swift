@@ -37,6 +37,17 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         self.username.title = FirebaseLib.getUsername()
         self.profilePhotoSetup()
         self.loadProfilePhoto()
+        
+        FirebaseLib.getUserData
+        { (userData) in
+            guard let data = userData else
+            {
+                print("Error while get the data")
+                return
+            }
+            self.nameLabel.text = data.name
+            
+        }
     }
     func profilePhotoSetup()
     {

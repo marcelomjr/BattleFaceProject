@@ -27,14 +27,17 @@ class InvitationViewController: UIViewController
     
     @IBAction func buildBattle(_ sender: Any)
     {
-        
+        self.saveThePhoto()
+        performSegue(withIdentifier: "InvitationToTabBar", sender: nil)
+    }
+    func saveThePhoto()
+    {
         guard let photoData = UIImagePNGRepresentation(self.takenPhotoView.image!) else
         {
             print("Error in convertion")
             return
         }
         
-        performSegue(withIdentifier: "InvitationToTabBar", sender: nil)
         
         FirebaseLib.addPhoto(photoData: photoData)
         { (photoPath, error) in
@@ -47,6 +50,7 @@ class InvitationViewController: UIViewController
                 print(error)
             }
         }
+
     }
     
     @IBAction func selectAGuest(_ sender: Any) {
