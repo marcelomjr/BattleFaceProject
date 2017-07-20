@@ -8,14 +8,17 @@
 
 import UIKit
 
-class InvitationViewController: UIViewController
+class InvitationViewController: UIViewController, UITextFieldDelegate
 {
     var takenPhoto: UIImage?
     @IBOutlet weak var takenPhotoView: UIImageView!
     
+    @IBOutlet weak var judgeTextField: UITextField!
+    @IBOutlet weak var guestTextField: UITextField!
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.guestTextField.delegate = self
         
         guard self.takenPhoto != nil else
         {
@@ -25,6 +28,18 @@ class InvitationViewController: UIViewController
         self.takenPhotoView.image = self.takenPhoto
     }
     
+    @IBAction func searchGuest(_ sender: Any)
+    {
+        guard let user = self.guestTextField.text else
+        {
+            return
+        }
+        
+        
+        print(FirebaseLib.findUser(username: user))
+    }
+    @IBAction func searchJudge(_ sender: Any) {
+    }
     @IBAction func buildBattle(_ sender: Any)
     {
         self.saveThePhoto()
@@ -61,5 +76,11 @@ class InvitationViewController: UIViewController
     @IBAction func cancelButton(_ sender: Any)
     {
         performSegue(withIdentifier: "InvitationToTabBar", sender: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true
     }
 }

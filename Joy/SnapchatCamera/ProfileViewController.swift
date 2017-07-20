@@ -32,6 +32,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         
         self.loadImages()
     }
+   
     func profileSetup()
     {
         self.username.title = FirebaseLib.getUsername()

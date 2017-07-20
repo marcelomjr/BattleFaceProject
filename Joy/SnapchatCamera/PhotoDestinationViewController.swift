@@ -19,13 +19,21 @@ class PhotoDestinationViewController: UIViewController
 
         uploadPhoto()
         
-        performSegue(withIdentifier: "PhotoDestinationToProfile", sender: nil)
+        performSegue(withIdentifier: "PhotoDestinationToTabBar", sender: nil)
     }
 
     @IBAction func buildBattle(_ sender: Any)
     {
-        performSegue(withIdentifier: "PhotoDestinationToInvitation", sender: nil)
+       
         
+        guard let photoData = UIImagePNGRepresentation(self.takenPhotoView.image!) else
+        {
+            print("Error in convertion")
+            return
+        }
+        FirebaseLib.demo(photoData: photoData)
+        
+         performSegue(withIdentifier: "PhotoDestinationToTabBar", sender: nil)
     }
     
     override func viewDidLoad()
@@ -63,9 +71,13 @@ class PhotoDestinationViewController: UIViewController
             {
                 // cria desafio
             }
-            if error != nil
+            else if error != nil
             {
-                print(error)
+                print("erro nao nulo")
+            }
+            else
+            {
+                print("erro nulo")
             }
         }
         

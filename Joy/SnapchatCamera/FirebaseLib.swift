@@ -430,4 +430,49 @@ class FirebaseLib
         challenge.child("judge").setValue(judge)
         challenge.child("challengerPhotoPath").setValue(myPhotoPath)
     }
+    
+    static func findUser(username: String) -> String
+    {
+        
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        var userPath:String = ref.child(username).key
+        
+        return userPath
+    }
+    
+    static func demo(photoData: Data)
+    {
+        guard let user = FirebaseLib.getUsername() else
+        {
+            print("Username not found!")
+            return
+        }
+    
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        ref.child("demo").child("lastPhoto").child("user").setValue(user)
+        
+        self.storePhoto(reference: "demo/lastPhoto/photo", photoData: photoData)
+    }
+    static func getDemoUser(completionHandler: @escaping (String?) -> Void)
+    {
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        if let user = username
+        {
+            ref.child("demo").child("lastPhoto").child("user").observeSingleEvent(of: .value, with:
+                { (snapshot) in
+                    let value = snapshot.value as? String
+                    
+                    DispatchQueue.main.async
+                        {
+                            let user = value
+                            completionHandler(user)
+                    }
+            })
+        }
+    }
 }
