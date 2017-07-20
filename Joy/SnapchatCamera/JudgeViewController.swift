@@ -15,7 +15,7 @@ class JudgeViewController: UIViewController , UITableViewDataSource, UITableView
     @IBOutlet weak var tableView: UITableView!
     
     let photos = ["Face1", "Face2", "Face3", "Face4", "Face5", "Face6", "Face7"]
-    let names = ["Clamacas", "Marcelo", "Clara", "Lucas", "Afonso", "Shakira", "Tyana"]
+    let names = ["LucasCB", "Clara", "Marcelo", "Picanha", "LucasDC", "Eduardo", "Ricardo"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     

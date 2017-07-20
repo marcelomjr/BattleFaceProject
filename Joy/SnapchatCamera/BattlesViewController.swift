@@ -20,7 +20,7 @@ class BattlesViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     let photos = ["Face1", "Face2", "Face6", "Face4", "Face5", "Face6", "Face3"]
-    let names = ["Clamacas", "Marcelo", "Clara", "Lucas", "Afonso", "Shakira", "Tyana"]
+    let names = ["LucasCB", "Clara", "Marcelo", "Picanha", "LucasDC", "Eduardo", "Ricardo"]
     
     
     override func viewWillAppear(_ animated: Bool) {
