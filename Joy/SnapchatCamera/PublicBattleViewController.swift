@@ -49,6 +49,10 @@ class PublicBattlesViewController: UIViewController
                 self.activityIndicator.stopAnimating()
         })
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.image.transform = self.image.transform.rotated(by: CGFloat(Double.pi/2))
+    }
 //    override func viewWillAppear(_ animated: Bool) {
 //        super.viewWillAppear(animated)
 //        updataImage()

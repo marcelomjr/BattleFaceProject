@@ -83,6 +83,8 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     func loadImages()
     {
         print("load imagens")
+        self.images.removeAll()
+//        self.photoCollection.reloadData()
         
         FirebaseLib.getPhotosPath
         {
@@ -101,8 +103,6 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
             
             let photosNumber = photosRef.count
             
-            self.images.removeAll()
-            self.photoCollection.reloadData()
             
             for photoIndex in 0 ..< photosNumber
             {
