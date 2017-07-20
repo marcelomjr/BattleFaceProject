@@ -30,7 +30,7 @@ class PublicBattlesViewController: UIViewController
                 
                 
                 FirebaseLib.getProfilePhoto(completionHandler:
-                    { (photo) in
+                    { (error, photo) in
                         self.image.image = photo
                         self.image.layer.masksToBounds = true
                         self.image.layer.borderWidth = 0

@@ -15,6 +15,7 @@ import FirebaseAuth
 class FirebaseLib
 {
     static private var username: String?
+    
     static func editProfilePhoto(user: String, photoData: Data)
     {
         var path = "userPhotos/" + user + "/profilePhoto.jpg"
@@ -22,33 +23,7 @@ class FirebaseLib
         
     }
     
-    static func getProfilePhoto(completionHandler: @escaping (UIImage?) -> Void)
-    {
-        guard let user = self.username else
-        {
-            print("Username not found in this device!")
-            return
-        }
-        
-        let path = "userPhotos/" + user + "/profilePhoto.jpg"
-        
-        self.downloadImage(reference: path)
-        {
-            (error, profilePhoto) in
-            
-            DispatchQueue.main.async
-            {
-                guard profilePhoto != nil else
-                {
-                    completionHandler(nil)
-                    return
-                }
-                completionHandler(profilePhoto)
-
-            }
-        }
-        
-    }
+   
     static func addPhoto(photoData: Data, completionHandler: @escaping (String?, String?) -> Void)
     {
         guard let user = self.username else
@@ -114,6 +89,41 @@ class FirebaseLib
             print(downloadURL)
         }
     }
+    static func getProfilePhoto(completionHandler: @escaping (Error?, UIImage?) -> Void)
+    {
+        guard let user = self.username else
+        {
+            print("Username not found in this device!")
+            return
+        }
+        
+        let path = "userPhotos/" + user + "/profilePhoto.jpg"
+        
+        self.downloadImage(reference: path)
+        {
+            (error, profilePhoto) in
+            
+            DispatchQueue.main.async
+                {
+                    guard profilePhoto != nil else
+                    {
+                        guard error != nil else
+                        {
+                            // Error while convert Data to UIImage
+                            completionHandler(nil, nil)
+                            return
+                        }
+                        // Error while get image
+                        completionHandler(error, nil)
+                        return
+                        
+                    }
+                    // Profile photo is taken with sucess
+                    completionHandler(nil, profilePhoto)
+            }
+        }
+        
+    }
     
     /* This function downloads a photo from the server
      * Returns a image or nil if there is an error
@@ -134,7 +144,7 @@ class FirebaseLib
         let imageRef = storageRef.child(reference)
     
         // Download in memory with a maximum allowed size of 20 MB
-        imageRef.getData(maxSize: 10 * 1024 * 1024)
+        imageRef.getData(maxSize: 20 * 1024 * 1024)
         {
             data, error in
             DispatchQueue.main.async
@@ -142,11 +152,11 @@ class FirebaseLib
                 // Get the error if it exists
                 guard error == nil else
                 {
-                    print("deu erro")//////////////////////////////////////////////////
+                    print("Error while get the photo, in downloadImage")
                     completionHandler(error, nil)
                     return
                 }
-                // Create the image
+                // Try create the image
                 guard let image = UIImage(data: data!) else
                 {
                     print("Error creating image from data")
@@ -158,57 +168,41 @@ class FirebaseLib
         }
     }
     
-    static func downloadUserPhotos(completionHandler: @escaping ([UIImage]?) -> Void)
+    static func getPhotosPath(completionHandler: @escaping (Error?, [String]?) -> Void)
     {
-        var photos: [UIImage]?
-        var ref: DatabaseReference!
-        
-        ref = Database.database().reference()
-        guard let user = self.username else
+        // Verify user.
+        guard let user = self.getUsername() else
         {
-            DispatchQueue.main.async
-            {
-                completionHandler(nil)
-            }
+            completionHandler(nil, nil)
             return
         }
+        
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        // Download of all photo's reference.
         ref.child("usersData").child(user).child("photos").observeSingleEvent(of: .value, with:
         { (snapshot) in
+            
             let value = snapshot.value as? NSDictionary
             let photosRef = value?.allValues as? [String]
+            
+            // Test array of references
             guard var photosPath = photosRef else
             {
-                print("Nenhuma referencia de foto encontrada")
+                print("Error! Photo's path not found")
                 return
             }
-            photosPath = photosPath.sorted()
-            photos = [UIImage]()
             
-            for photoPath in photosPath
-            {
-                
-                self.downloadImage(reference: photoPath, completionHandler:
-                { (photo) in
-                    DispatchQueue.main.async
-                    {
-                        guard photo != nil else
-                        {
-                            
-                            return
-                        }
-                            print("photoPath: \(photoPath)")
-                           // photos?.append(photo!)/////////////////////////////////////////////////////////////
-                        
-                    }
-                })
-            }
-            DispatchQueue.main.async
-            {
-                completionHandler(photos)
-            }
+            photosPath = photosPath.sorted()
+            completionHandler(nil, photosPath)
             
         })
+        { (error) in
+            completionHandler(error, nil)
+        }
     }
+    
     static func getUsernameFromUserID(userID: String, completionHandler: @escaping (String?) -> Void)
     {
         var ref: DatabaseReference!
@@ -238,7 +232,7 @@ class FirebaseLib
                     let value = snapshot.value as? String
                 
                     DispatchQueue.main.async
-                        {
+                    {
                             let data = value
                             completionHandler(data)
                     }
@@ -393,6 +387,19 @@ class FirebaseLib
     
     static func getUsername() -> String?
     {
+        if self.username != nil
+        {
+            guard let userID = Log.getUserID() else
+            {
+                print("User ID not found")
+                return nil
+            }
+            self.getUsernameFromUserID(userID: userID, completionHandler:
+            { (user) in
+                self.username = user
+            })
+        }
+        
         return self.username
     }
     

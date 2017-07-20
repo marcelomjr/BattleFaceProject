@@ -9,25 +9,26 @@
 import UIKit
 class ProfileViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate
 {
-    
     @IBOutlet weak var username: UINavigationItem!
     @IBOutlet weak var photoCollection: UICollectionView!
     @IBOutlet weak var profilePhotoView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var activityIndicator:
+    UIActivityIndicatorView!
     var customImageFlowLayout: CustomImageFlowLayout!
     
     var images = [UIImage]()
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        profileSetup()
         
         self.photoCollection.delegate = self
         self.photoCollection.dataSource = self
         
         customImageFlowLayout = CustomImageFlowLayout()
         photoCollection.collectionViewLayout = customImageFlowLayout
+        
+        profileSetup()
         
         self.loadImages()
     }
@@ -48,12 +49,20 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     {
         self.activityIndicator.startAnimating()
         FirebaseLib.getProfilePhoto(completionHandler:
-            { (profilePhoto) in
+            { (error, profilePhoto) in
+                
                 guard profilePhoto != nil else
                 {
-                    print("Error")
+                    
+                    guard error != nil else
+                    {
+                        print("Error while get the photos")
+                        return
+                    }
+                    print(error!.localizedDescription)
                     return
                 }
+                
                 self.profilePhotoView.image = profilePhoto
                 self.activityIndicator.stopAnimating()
         })
@@ -63,32 +72,50 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     {
         print("load imagens")
         
-    
-//        FirebaseLib.downloadUserPhotos
-//        { (userPhotos) in
-//            guard userPhotos != nil else
-//            {
-//                print("Error! Photos doesn't found.")
-//                return
-//            }
-//            self.images.removeAll()
-//           for photo in 0 ..< userPhotos!.count
-//           {
-//                self.images.append(userPhotos![photo])
-//            }
-//        }
-
-        let path = "userPhotos/" + FirebaseLib.getUsername()! + "/photo2"
-        FirebaseLib.downloadImage(reference: path) {
-            (error, image1) in
-            if image1 != nil
+        FirebaseLib.getPhotosPath
+        {
+            (error, photosPath) in
+            
+            guard let photosRef = photosPath else
             {
-                self.images.append(image1!)
-                self.photoCollection.reloadData()
+                guard error != nil else
+                {
+                    print("Error while get the photo paths")
+                    return
+                }
+                print(error!.localizedDescription)
+                return
             }
+            
+            let photosNumber = photosRef.count
+            
+            self.images.removeAll()
+            self.photoCollection.reloadData()
+            
+            for photoIndex in 0 ..< photosNumber
+            {
+                FirebaseLib.downloadImage(reference: photosRef[photoIndex], completionHandler:
+                {
+                        (imageError, gotPhoto) in
+                        
+                        guard let photo = gotPhoto else
+                        {
+                            
+                            guard imageError != nil else
+                            {
+                                print("Error while get the photos")
+                                return
+                            }
+                            print(imageError!.localizedDescription)
+                            return
+                        }
+                        
+                        self.images.append(photo)
+                        self.photoCollection.reloadData()
+                })
+            }
+            
         }
-        
-
     }
 
     @IBAction func reloadAction(_ sender: Any)
