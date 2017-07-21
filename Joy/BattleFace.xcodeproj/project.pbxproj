@@ -288,7 +288,7 @@
 				TargetAttributes = {
 					AC94AD5A1B8E40BF002D9AD2 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 987J4BXX78;
+						DevelopmentTeam = J5KQYDNX5E;
 						LastSwiftMigration = 0830;
 					};
 					AC94AD6F1B8E40BF002D9AD2 = {
@@ -585,7 +585,7 @@
 			baseConfigurationReference = E999D9EA3C71D2FABB11C6A4 /* Pods-SnapchatCamera.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 987J4BXX78;
+				DEVELOPMENT_TEAM = J5KQYDNX5E;
 				INFOPLIST_FILE = SnapchatCamera/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -600,7 +600,7 @@
 			baseConfigurationReference = 4E3AC7818B4C18573DD65E8A /* Pods-SnapchatCamera.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 987J4BXX78;
+				DEVELOPMENT_TEAM = J5KQYDNX5E;
 				INFOPLIST_FILE = SnapchatCamera/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

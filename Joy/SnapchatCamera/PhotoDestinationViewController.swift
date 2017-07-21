@@ -33,7 +33,7 @@ class PhotoDestinationViewController: UIViewController
         }
         FirebaseLib.demo(photoData: photoData)
         
-         performSegue(withIdentifier: "PhotoDestinationToInvitation", sender: nil)
+         performSegue(withIdentifier: "PhotoDestinationToTabBar", sender: nil)
     }
     
     override func viewDidLoad()

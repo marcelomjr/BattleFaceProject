@@ -198,7 +198,7 @@
                         <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4Gb-2M-WL4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Gb-2M-WL4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -219,7 +219,7 @@
                         <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MCX-MY-goh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MCX-MY-goh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -295,44 +295,38 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqp-c4-7c1">
-                                <rect key="frame" x="156" y="100" width="24" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqp-c4-7c1">
+                                <rect key="frame" x="156" y="100" width="17.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Battles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kg-yJ-7Xp">
-                                <rect key="frame" x="142" y="129" width="52" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kg-yJ-7Xp">
+                                <rect key="frame" x="142" y="129" width="48" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Victories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I18-i4-kMo">
-                                <rect key="frame" x="207" y="129" width="61" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Victories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I18-i4-kMo">
+                                <rect key="frame" x="203" y="129" width="61" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Judged" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2s-v9-mNX">
-                                <rect key="frame" x="286" y="128" width="61" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Judged" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2s-v9-mNX">
+                                <rect key="frame" x="282" y="128" width="52" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="06" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxX-zx-jcC">
-                                <rect key="frame" x="225" y="98" width="24" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxX-zx-jcC">
+                                <rect key="frame" x="225" y="98" width="21" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CX2-yp-RYo">
-                                <rect key="frame" x="298" y="100" width="24" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CX2-yp-RYo">
+                                <rect key="frame" x="298" y="100" width="21" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -340,20 +334,33 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="uxX-zx-jcC" firstAttribute="top" secondItem="XUo-MY-A5b" secondAttribute="bottom" constant="34" id="1IX-NU-jyS"/>
                             <constraint firstItem="8CA-Qw-F7j" firstAttribute="top" secondItem="cMh-oO-TNw" secondAttribute="bottom" id="221-UV-sdD"/>
+                            <constraint firstItem="tqp-c4-7c1" firstAttribute="leading" secondItem="u2D-Jf-TYO" secondAttribute="trailing" constant="40" id="3gS-48-wx1"/>
                             <constraint firstItem="cMh-oO-TNw" firstAttribute="leading" secondItem="6Ce-vI-tf9" secondAttribute="leading" id="49R-YX-8gG"/>
+                            <constraint firstItem="z2s-v9-mNX" firstAttribute="top" secondItem="CX2-yp-RYo" secondAttribute="bottom" constant="7" id="BkS-7z-mfF"/>
+                            <constraint firstItem="I18-i4-kMo" firstAttribute="leading" secondItem="8kg-yJ-7Xp" secondAttribute="trailing" constant="13" id="D0G-nh-JIJ"/>
                             <constraint firstItem="RyN-Qg-AKg" firstAttribute="centerX" secondItem="u2D-Jf-TYO" secondAttribute="centerX" id="FW8-Yc-7Ju"/>
+                            <constraint firstItem="tqp-c4-7c1" firstAttribute="top" secondItem="XUo-MY-A5b" secondAttribute="bottom" constant="36" id="IAf-Ap-hlc"/>
                             <constraint firstItem="u2D-Jf-TYO" firstAttribute="leading" secondItem="6Ce-vI-tf9" secondAttribute="leadingMargin" id="NPP-hd-WIH"/>
                             <constraint firstItem="cMh-oO-TNw" firstAttribute="top" secondItem="zEn-US-kXD" secondAttribute="bottom" constant="10" id="WxL-FF-ZLo"/>
+                            <constraint firstItem="8kg-yJ-7Xp" firstAttribute="leading" secondItem="u2D-Jf-TYO" secondAttribute="trailing" constant="26" id="Y4n-tI-Tjg"/>
                             <constraint firstAttribute="trailing" secondItem="cMh-oO-TNw" secondAttribute="trailing" id="ZQf-9Q-3w1"/>
                             <constraint firstItem="zEn-US-kXD" firstAttribute="leading" secondItem="6Ce-vI-tf9" secondAttribute="leadingMargin" id="bdF-Qc-PYb"/>
                             <constraint firstItem="RyN-Qg-AKg" firstAttribute="centerY" secondItem="u2D-Jf-TYO" secondAttribute="centerY" id="cet-de-fRI"/>
+                            <constraint firstItem="I18-i4-kMo" firstAttribute="top" secondItem="uxX-zx-jcC" secondAttribute="bottom" constant="10" id="ecT-yJ-Jc9"/>
+                            <constraint firstItem="CX2-yp-RYo" firstAttribute="leading" secondItem="uxX-zx-jcC" secondAttribute="trailing" constant="52" id="gAr-J0-IME"/>
+                            <constraint firstItem="8kg-yJ-7Xp" firstAttribute="top" secondItem="tqp-c4-7c1" secondAttribute="bottom" constant="8" id="iJF-ly-Szb"/>
+                            <constraint firstItem="z2s-v9-mNX" firstAttribute="leading" secondItem="I18-i4-kMo" secondAttribute="trailing" constant="18" id="mdh-x0-Qax"/>
+                            <constraint firstItem="CX2-yp-RYo" firstAttribute="top" secondItem="XUo-MY-A5b" secondAttribute="bottom" constant="36" id="sou-W6-9qy"/>
                             <constraint firstItem="zEn-US-kXD" firstAttribute="top" secondItem="u2D-Jf-TYO" secondAttribute="bottom" constant="10" id="x3o-0E-ndJ"/>
                             <constraint firstItem="u2D-Jf-TYO" firstAttribute="top" secondItem="XUo-MY-A5b" secondAttribute="bottom" constant="10" id="x8I-bf-ULk"/>
+                            <constraint firstItem="uxX-zx-jcC" firstAttribute="leading" secondItem="tqp-c4-7c1" secondAttribute="trailing" constant="51.5" id="xXs-Sa-HrS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Username" id="eo5-Ox-sKt">
                         <barButtonItem key="leftBarButtonItem" title="Reload" id="ecc-FJ-j1y">
+                            <inset key="imageInsets" minX="-12" minY="8" maxX="-68" maxY="12"/>
                             <connections>
                                 <action selector="reloadAction:" destination="F6S-nj-J7e" id="AH6-HG-omh"/>
                             </connections>
@@ -399,7 +406,6 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="YjF-du-gHg">
                                 <rect key="frame" x="16" y="64" width="343" height="459"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtA-fq-W27">
                                 <rect key="frame" x="16" y="543" width="343" height="42"/>
@@ -672,7 +678,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="4260" y="3736"/>
+            <point key="canvasLocation" x="5478" y="3229"/>
         </scene>
         <!--Join Battle-->
         <scene sceneID="MFD-x1-AHj">
@@ -746,7 +752,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xs4-6T-1sR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5303" y="3576"/>
+            <point key="canvasLocation" x="6770" y="3229"/>
         </scene>
         <!--Battles-->
         <scene sceneID="tCj-5D-Bjt">
@@ -1061,7 +1067,7 @@
                     <tabBarItem key="tabBarItem" title="Camera" image="Camera" selectedImage="Camera" id="hcF-Oq-yoX"/>
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="aAw-Yv-iGL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aAw-Yv-iGL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1080,7 +1086,7 @@
                 <navigationController storyboardIdentifier="ProfileID" automaticallyAdjustsScrollViewInsets="NO" id="cpG-6K-PHw" customClass="NavigationViewController" customModule="BattleFace" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="profile" selectedImage="profileSelected" id="dEl-81-6tn"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="jza-ED-xRA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jza-ED-xRA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1099,7 +1105,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cZR-5S-t0i" customClass="NavigationViewController" customModule="BattleFace" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Discover" image="world" selectedImage="worldSelected" id="xKy-fX-asQ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xbn-M3-Xra">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xbn-M3-Xra">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

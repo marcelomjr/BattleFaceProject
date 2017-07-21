@@ -15,6 +15,6 @@ class ImageCollectionViewCell: UICollectionViewCell
     override func prepareForReuse() {
         super.prepareForReuse()
         self.imageView.image = nil
-        
+        //self.imageView.transform = self.imageView.transform.rotated(by: CGFloat(Double.pi/2))
     }
 }

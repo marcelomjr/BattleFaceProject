@@ -83,6 +83,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     func loadImages()
     {
         print("load imagens")
+        self.loadProfilePhoto()
         self.images.removeAll()
 //        self.photoCollection.reloadData()
         
