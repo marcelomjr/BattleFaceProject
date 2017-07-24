@@ -15,6 +15,9 @@
 		9C5218F21F0C249A00D2D201 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C5218F11F0C249A00D2D201 /* GoogleService-Info.plist */; };
 		9C81F16A1F1F23CC003C510D /* Invitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81F1691F1F23CC003C510D /* Invitation.swift */; };
 		9CA17E711F1F7E3900DC8FF3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA17E701F1F7E3900DC8FF3 /* ProfileViewController.swift */; };
+		9CE8859D1F25616A0019EE49 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE8859C1F25616A0019EE49 /* Camera.storyboard */; };
+		9CE8859F1F258C180019EE49 /* dddChallengedInvitationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE8859E1F258C180019EE49 /* dddChallengedInvitationTableViewController.swift */; };
+		9CE885A11F2672310019EE49 /* ChallengedInvitationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE885A01F2672310019EE49 /* ChallengedInvitationTableViewController.swift */; };
 		A20F4DF31F1515C00037EB24 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20F4DEF1F1515C00037EB24 /* LoginScreen.storyboard */; };
 		A20F4DF41F1515C00037EB24 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4DF01F1515C00037EB24 /* LoginScreenViewController.swift */; };
 		A20F4DF51F1515C00037EB24 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4DF11F1515C00037EB24 /* RegisterViewController.swift */; };
@@ -57,6 +60,9 @@
 		9C5218F11F0C249A00D2D201 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C81F1691F1F23CC003C510D /* Invitation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invitation.swift; sourceTree = "<group>"; };
 		9CA17E701F1F7E3900DC8FF3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9CE8859C1F25616A0019EE49 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
+		9CE8859E1F258C180019EE49 /* dddChallengedInvitationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dddChallengedInvitationTableViewController.swift; sourceTree = "<group>"; };
+		9CE885A01F2672310019EE49 /* ChallengedInvitationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengedInvitationTableViewController.swift; sourceTree = "<group>"; };
 		A20F4DEF1F1515C00037EB24 /* LoginScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
 		A20F4DF01F1515C00037EB24 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		A20F4DF11F1515C00037EB24 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -132,21 +138,24 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		9C3360BC1F19270F006EBDFF /* CameraScreen */ = {
+		9C3360BC1F19270F006EBDFF /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				9CE8859C1F25616A0019EE49 /* Camera.storyboard */,
 				A20F4DFF1F1517C30037EB24 /* CameraViewController.swift */,
 				9C3360BA1F192705006EBDFF /* PhotoDestinationViewController.swift */,
 				9C81F1691F1F23CC003C510D /* Invitation.swift */,
+				9CE8859E1F258C180019EE49 /* dddChallengedInvitationTableViewController.swift */,
+				9CE885A01F2672310019EE49 /* ChallengedInvitationTableViewController.swift */,
 			);
-			name = CameraScreen;
+			name = Camera;
 			sourceTree = "<group>";
 		};
 		9C5523FB1F057F4D00EB312C /* View */ = {
 			isa = PBXGroup;
 			children = (
 				9CA17E6D1F1F756300DC8FF3 /* Profile */,
-				9C3360BC1F19270F006EBDFF /* CameraScreen */,
+				9C3360BC1F19270F006EBDFF /* Camera */,
 				A2F601001F10144F00C55E52 /* Login */,
 				A25712071F0ECA3E0001376E /* BattlesViewController.swift */,
 				E6DBCE3A1F193A500085E91F /* BattleTableViewCell.swift */,
@@ -323,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A20F4DFE1F1517960037EB24 /* Main.storyboard in Resources */,
+				9CE8859D1F25616A0019EE49 /* Camera.storyboard in Resources */,
 				A20F4DFA1F1516750037EB24 /* Images.xcassets in Resources */,
 				9C5218F21F0C249A00D2D201 /* GoogleService-Info.plist in Resources */,
 				A20F4DFB1F1516750037EB24 /* pp.jpg in Resources */,
@@ -455,6 +465,8 @@
 				A25712081F0ECA3E0001376E /* BattlesViewController.swift in Sources */,
 				9CA17E711F1F7E3900DC8FF3 /* ProfileViewController.swift in Sources */,
 				A22030BC1F154A080071E708 /* ImageCollectionViewCell.swift in Sources */,
+				9CE8859F1F258C180019EE49 /* dddChallengedInvitationTableViewController.swift in Sources */,
+				9CE885A11F2672310019EE49 /* ChallengedInvitationTableViewController.swift in Sources */,
 				9C0371B71F15736900E57048 /* UserData.swift in Sources */,
 				9C81F16A1F1F23CC003C510D /* Invitation.swift in Sources */,
 				AC94AD611B8E40BF002D9AD2 /* AppDelegate.swift in Sources */,

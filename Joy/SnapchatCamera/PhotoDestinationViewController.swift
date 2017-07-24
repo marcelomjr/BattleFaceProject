@@ -33,13 +33,13 @@ class PhotoDestinationViewController: UIViewController
         }
         FirebaseLib.demo(photoData: photoData)
         
-         performSegue(withIdentifier: "PhotoDestinationToTabBar", sender: nil)
+         performSegue(withIdentifier: "PhotoDestinationToChallengedInvitation", sender: nil)
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+            
         guard self.takenPhoto != nil else
         {
             print("Error while taking photo!")

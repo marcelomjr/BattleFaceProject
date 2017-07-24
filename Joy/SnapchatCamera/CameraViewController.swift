@@ -219,7 +219,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 
 
     @IBAction func CancelCaptureSession(_ sender: Any) {
-        performSegue(withIdentifier: "CancelCaptureSession", sender: AnyObject.self)
+        performSegue(withIdentifier: "CameraToTabBarController", sender: nil)
     }
 
     

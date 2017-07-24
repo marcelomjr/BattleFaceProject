@@ -76,98 +76,6 @@
             </objects>
             <point key="canvasLocation" x="1869.5999999999999" y="2229.5352323838083"/>
         </scene>
-        <!--Camera-->
-        <scene sceneID="fLy-yM-Xof">
-            <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="Gc3-ck-ll3" customClass="CameraViewController" customModule="BattleFace" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="IHk-pf-fhV"/>
-                        <viewControllerLayoutGuide type="bottom" id="2DG-EY-f7p"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tOo-Ve-Okr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ibS-ob-yHJ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rF2-bB-CuG">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFf-k8-mbR">
-                                <rect key="frame" x="142" y="557" width="90" height="90"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="KFf-k8-mbR" secondAttribute="height" multiplier="1:1" id="8t5-pJ-j09"/>
-                                    <constraint firstAttribute="width" constant="90" id="kFE-xy-OAW"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="Capture"/>
-                                <connections>
-                                    <action selector="startCapture:" destination="Gc3-ck-ll3" eventType="touchUpInside" id="T0C-91-Wpx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hf-SQ-Rl7">
-                                <rect key="frame" x="62" y="577" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="1hf-SQ-Rl7" secondAttribute="height" multiplier="1:1" id="eLN-Qo-P6R"/>
-                                    <constraint firstAttribute="width" constant="60" id="sZE-PK-YI7"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="Flash"/>
-                                <connections>
-                                    <action selector="toggleFlash:" destination="Gc3-ck-ll3" eventType="touchUpInside" id="rNQ-hS-hze"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQg-vv-D1I">
-                                <rect key="frame" x="8" y="28" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="CancelCaptureSession:" destination="Gc3-ck-ll3" eventType="touchUpInside" id="t2Q-Qf-e16"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSi-dx-2H2">
-                                <rect key="frame" x="252" y="577" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="5yF-6T-t2v"/>
-                                    <constraint firstAttribute="width" secondItem="fSi-dx-2H2" secondAttribute="height" multiplier="1:1" id="VPT-4D-nEt"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="CameraTraseira"/>
-                                <connections>
-                                    <action selector="setCamera:" destination="Gc3-ck-ll3" eventType="touchUpInside" id="F3K-zv-MYL"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="KFf-k8-mbR" firstAttribute="centerX" secondItem="tOo-Ve-Okr" secondAttribute="centerX" id="0nH-Oj-ITm"/>
-                            <constraint firstItem="KFf-k8-mbR" firstAttribute="leading" secondItem="1hf-SQ-Rl7" secondAttribute="trailing" constant="20" id="3ip-Rq-Ee8"/>
-                            <constraint firstItem="fSi-dx-2H2" firstAttribute="leading" secondItem="KFf-k8-mbR" secondAttribute="trailing" constant="20" id="4Gc-At-qCd"/>
-                            <constraint firstItem="2DG-EY-f7p" firstAttribute="top" secondItem="fSi-dx-2H2" secondAttribute="bottom" constant="30" id="YS4-z2-6BI"/>
-                            <constraint firstItem="2DG-EY-f7p" firstAttribute="top" secondItem="1hf-SQ-Rl7" secondAttribute="bottom" constant="30" id="heX-ta-OLe"/>
-                            <constraint firstItem="2DG-EY-f7p" firstAttribute="top" secondItem="KFf-k8-mbR" secondAttribute="bottom" constant="20" id="kAx-0s-nxg"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Camera" id="PRI-e4-zlZ"/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="cameraButton" destination="fSi-dx-2H2" id="CBC-XQ-vb9"/>
-                        <outlet property="cameraView" destination="ibS-ob-yHJ" id="OTz-l7-Of0"/>
-                        <outlet property="captureButton" destination="KFf-k8-mbR" id="tyT-Et-QMw"/>
-                        <outlet property="flashButton" destination="1hf-SQ-Rl7" id="rIF-I0-XEY"/>
-                        <outlet property="pickedImageView" destination="rF2-bB-CuG" id="Nyy-HG-WCd"/>
-                        <segue destination="fwY-Gt-5pD" kind="show" identifier="CancelCaptureSession" id="aff-Dx-Ecq"/>
-                        <segue destination="Jfg-2q-3xs" kind="show" identifier="CameraToPhotoDestination" id="Wji-ei-Mdd"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HnA-P1-G5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3209" y="2230"/>
-        </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="up4-f9-beD">
             <objects>
@@ -181,7 +89,7 @@
                     <connections>
                         <segue destination="V2U-QZ-xpm" kind="relationship" relationship="viewControllers" id="Uww-S1-AEP"/>
                         <segue destination="cZR-5S-t0i" kind="relationship" relationship="viewControllers" id="xie-jj-Tyd"/>
-                        <segue destination="grD-hs-Jmd" kind="relationship" relationship="viewControllers" id="JJf-zX-FaE"/>
+                        <segue destination="IFm-st-Q6A" kind="relationship" relationship="viewControllers" id="4S8-kh-gAT"/>
                         <segue destination="Rgr-6W-7Hh" kind="relationship" relationship="viewControllers" id="Dbq-f9-zAi"/>
                         <segue destination="cpG-6K-PHw" kind="relationship" relationship="viewControllers" id="KHb-LN-E1I"/>
                     </connections>
@@ -189,6 +97,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ce-Iw-1xk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2097" y="272"/>
+        </scene>
+        <!--CameraID-->
+        <scene sceneID="55f-j3-4ll">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Camera" referencedIdentifier="CameraID" id="IFm-st-Q6A" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="R05-kx-HNS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yG8-bQ-t7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2969" y="1131"/>
         </scene>
         <!--Battles-->
         <scene sceneID="GCG-wf-ii7">
@@ -198,7 +116,7 @@
                         <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Gb-2M-WL4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4Gb-2M-WL4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -219,7 +137,7 @@
                         <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MCX-MY-goh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MCX-MY-goh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -392,79 +310,6 @@
             </objects>
             <point key="canvasLocation" x="6771" y="2704"/>
         </scene>
-        <!--Photo Confirmation-->
-        <scene sceneID="fbl-Fy-jRg">
-            <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="Jfg-2q-3xs" customClass="PhotoDestinationViewController" customModule="BattleFace" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="S9d-5L-ySq"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ewq-Cq-Pem"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7tV-6j-goe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="YjF-du-gHg">
-                                <rect key="frame" x="16" y="64" width="343" height="459"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtA-fq-W27">
-                                <rect key="frame" x="16" y="543" width="343" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="ZG2-bF-4qu"/>
-                                </constraints>
-                                <state key="normal" title="Post" backgroundImage="buttonBG">
-                                    <color key="titleColor" red="0.1126232073" green="0.51747566460000005" blue="0.87040537600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="postButton:" destination="Jfg-2q-3xs" eventType="touchUpInside" id="jXh-Mr-hoi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6h-Mh-lJZ">
-                                <rect key="frame" x="16" y="605" width="343" height="42"/>
-                                <state key="normal" title="Battle" backgroundImage="buttonBG">
-                                    <color key="titleColor" red="0.9516311288" green="0.050255946820000001" blue="0.48363977670000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="buildBattle:" destination="Jfg-2q-3xs" eventType="touchUpInside" id="L5x-zK-tNU"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="EtA-fq-W27" firstAttribute="top" secondItem="YjF-du-gHg" secondAttribute="bottom" constant="20" id="30a-iC-a5Q"/>
-                            <constraint firstItem="YjF-du-gHg" firstAttribute="leading" secondItem="7tV-6j-goe" secondAttribute="leadingMargin" id="FTe-en-Tvm"/>
-                            <constraint firstItem="Y6h-Mh-lJZ" firstAttribute="height" secondItem="EtA-fq-W27" secondAttribute="height" id="KL8-FE-4RE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="EtA-fq-W27" secondAttribute="trailing" id="MFo-ZR-XhV"/>
-                            <constraint firstItem="Y6h-Mh-lJZ" firstAttribute="leading" secondItem="7tV-6j-goe" secondAttribute="leadingMargin" id="RLj-Tn-kLc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Y6h-Mh-lJZ" secondAttribute="trailing" id="Uyy-rq-gth"/>
-                            <constraint firstItem="YjF-du-gHg" firstAttribute="trailing" secondItem="7tV-6j-goe" secondAttribute="trailingMargin" id="dYa-bF-86n"/>
-                            <constraint firstItem="YjF-du-gHg" firstAttribute="top" secondItem="S9d-5L-ySq" secondAttribute="bottom" constant="20" id="hj2-GL-Xuv"/>
-                            <constraint firstItem="Y6h-Mh-lJZ" firstAttribute="top" secondItem="EtA-fq-W27" secondAttribute="bottom" constant="20" id="vnU-yy-Ucm"/>
-                            <constraint firstItem="Ewq-Cq-Pem" firstAttribute="top" secondItem="Y6h-Mh-lJZ" secondAttribute="bottom" constant="20" id="yFh-AE-Sbw"/>
-                            <constraint firstItem="EtA-fq-W27" firstAttribute="leading" secondItem="7tV-6j-goe" secondAttribute="leadingMargin" id="yIe-SQ-LWx"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Photo Confirmation" id="TdQ-2x-3nQ">
-                        <barButtonItem key="backBarButtonItem" title=" " id="tsg-QR-6gd"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="takenPhotoView" destination="YjF-du-gHg" id="yWm-SF-8ls"/>
-                        <segue destination="MWK-Z0-7ZB" kind="show" identifier="PhotoDestinationToInvitation" id="Ev0-xv-p3t"/>
-                        <segue destination="SaO-da-ASq" kind="presentation" identifier="PhotoDestinationToTabBar" id="Uaw-z2-WRU"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="S6h-fC-Bld" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3208.8000000000002" y="3019.3403298350827"/>
-        </scene>
-        <!--TabBarControllerID-->
-        <scene sceneID="lOx-Bb-FNV">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="TabBarControllerID" id="SaO-da-ASq" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rkh-0k-TxI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3833" y="3019"/>
-        </scene>
         <!--Invite to Battle-->
         <scene sceneID="YA0-QD-VUn">
             <objects>
@@ -502,7 +347,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pbg" translatesAutoresizingMaskIntoConstraints="NO" id="AX6-Dz-th5">
-                                <rect key="frame" x="16" y="44" width="343" height="438"/>
+                                <rect key="frame" x="16" y="20" width="343" height="462"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZW-bI-HDJ">
                                 <rect key="frame" x="197.5" y="547" width="161.5" height="40"/>
@@ -580,7 +425,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YEw-7Y-7b9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3208.8000000000002" y="3736.2818590704651"/>
+            <point key="canvasLocation" x="3514" y="1905"/>
         </scene>
         <!--TabBarControllerID-->
         <scene sceneID="Hiv-Mz-whC">
@@ -588,7 +433,7 @@
                 <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="TabBarControllerID" id="ung-y2-Z7w" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sCx-eW-ahq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3209" y="4134"/>
+            <point key="canvasLocation" x="3017" y="2264"/>
         </scene>
         <!--Judge Battle-->
         <scene sceneID="CUw-h7-p55">
@@ -1060,33 +905,13 @@
             </objects>
             <point key="canvasLocation" x="5479" y="2265"/>
         </scene>
-        <!--Camera-->
-        <scene sceneID="uPY-hB-b8q">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="grD-hs-Jmd" customClass="NavigationViewController" customModule="BattleFace" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Camera" image="Camera" selectedImage="Camera" id="hcF-Oq-yoX"/>
-                    <toolbarItems/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aAw-Yv-iGL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Gc3-ck-ll3" kind="relationship" relationship="rootViewController" id="QIx-OQ-GV7"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mpB-QC-A6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3209" y="1460"/>
-        </scene>
         <!--Profile-->
         <scene sceneID="ztu-ak-RwY">
             <objects>
                 <navigationController storyboardIdentifier="ProfileID" automaticallyAdjustsScrollViewInsets="NO" id="cpG-6K-PHw" customClass="NavigationViewController" customModule="BattleFace" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="profile" selectedImage="profileSelected" id="dEl-81-6tn"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jza-ED-xRA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="jza-ED-xRA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1105,7 +930,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cZR-5S-t0i" customClass="NavigationViewController" customModule="BattleFace" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Discover" image="world" selectedImage="worldSelected" id="xKy-fX-asQ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xbn-M3-Xra">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xbn-M3-Xra">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1120,10 +945,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Camera" width="40" height="40"/>
-        <image name="CameraTraseira" width="40" height="40"/>
-        <image name="Capture" width="90" height="90"/>
-        <image name="Flash" width="40" height="40"/>
         <image name="WinColor" width="320" height="320"/>
         <image name="avatar" width="400" height="400"/>
         <image name="battles" width="40" height="40"/>
