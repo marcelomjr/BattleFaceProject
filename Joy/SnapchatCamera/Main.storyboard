@@ -296,11 +296,46 @@
                         <outlet property="profilePhotoView" destination="u2D-Jf-TYO" id="YyQ-Zc-yhK"/>
                         <outlet property="username" destination="eo5-Ox-sKt" id="rRQ-7b-B2p"/>
                         <segue destination="ChV-dU-m4g" kind="presentation" identifier="ToLoginScreenID" id="C8S-Fh-viF"/>
+                        <segue destination="mbE-G8-g8N" kind="show" identifier="ProfileToPhoto" id="4Dd-QZ-k6Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zjf-Z4-lPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6772" y="2217.8410794602701"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="ApF-g2-UdR">
+            <objects>
+                <viewController id="mbE-G8-g8N" customClass="ImageViewController" customModule="BattleFace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G9T-Se-oTX"/>
+                        <viewControllerLayoutGuide type="bottom" id="XJR-78-5nO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pB1-JX-nFF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dfY-cp-BUQ">
+                                <rect key="frame" x="16" y="93.5" width="343" height="480"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dfY-cp-BUQ" secondAttribute="height" multiplier="343:480" id="Jxp-aX-qLm"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dfY-cp-BUQ" firstAttribute="centerY" secondItem="pB1-JX-nFF" secondAttribute="centerY" id="0fb-uz-QqS"/>
+                            <constraint firstItem="dfY-cp-BUQ" firstAttribute="centerX" secondItem="pB1-JX-nFF" secondAttribute="centerX" id="aKL-z8-I82"/>
+                            <constraint firstItem="dfY-cp-BUQ" firstAttribute="leading" secondItem="pB1-JX-nFF" secondAttribute="leadingMargin" id="mEa-9a-Y7g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Image" destination="dfY-cp-BUQ" id="vor-wb-3lg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ka0-Mu-mNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7728.8000000000002" y="2217.8410794602701"/>
         </scene>
         <!--LoginScreenID-->
         <scene sceneID="tZw-LI-MZ8">
