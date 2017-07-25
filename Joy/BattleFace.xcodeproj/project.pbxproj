@@ -13,11 +13,10 @@
 		9C0B988D1F127F9A00375C08 /* FirebaseLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B988C1F127F9A00375C08 /* FirebaseLib.swift */; };
 		9C3360BB1F192705006EBDFF /* PhotoDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3360BA1F192705006EBDFF /* PhotoDestinationViewController.swift */; };
 		9C5218F21F0C249A00D2D201 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C5218F11F0C249A00D2D201 /* GoogleService-Info.plist */; };
-		9C81F16A1F1F23CC003C510D /* Invitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81F1691F1F23CC003C510D /* Invitation.swift */; };
 		9CA17E711F1F7E3900DC8FF3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA17E701F1F7E3900DC8FF3 /* ProfileViewController.swift */; };
 		9CE8859D1F25616A0019EE49 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE8859C1F25616A0019EE49 /* Camera.storyboard */; };
-		9CE8859F1F258C180019EE49 /* dddChallengedInvitationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE8859E1F258C180019EE49 /* dddChallengedInvitationTableViewController.swift */; };
-		9CE885A11F2672310019EE49 /* ChallengedInvitationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE885A01F2672310019EE49 /* ChallengedInvitationTableViewController.swift */; };
+		9CE885A31F2684430019EE49 /* GuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE885A21F2684430019EE49 /* GuestTableViewCell.swift */; };
+		9CE885A51F26EA520019EE49 /* InvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE885A41F26EA520019EE49 /* InvitationViewController.swift */; };
 		A20F4DF31F1515C00037EB24 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20F4DEF1F1515C00037EB24 /* LoginScreen.storyboard */; };
 		A20F4DF41F1515C00037EB24 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4DF01F1515C00037EB24 /* LoginScreenViewController.swift */; };
 		A20F4DF51F1515C00037EB24 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4DF11F1515C00037EB24 /* RegisterViewController.swift */; };
@@ -58,11 +57,10 @@
 		9C0B988C1F127F9A00375C08 /* FirebaseLib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseLib.swift; sourceTree = "<group>"; };
 		9C3360BA1F192705006EBDFF /* PhotoDestinationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDestinationViewController.swift; sourceTree = "<group>"; };
 		9C5218F11F0C249A00D2D201 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		9C81F1691F1F23CC003C510D /* Invitation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invitation.swift; sourceTree = "<group>"; };
 		9CA17E701F1F7E3900DC8FF3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9CE8859C1F25616A0019EE49 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
-		9CE8859E1F258C180019EE49 /* dddChallengedInvitationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dddChallengedInvitationTableViewController.swift; sourceTree = "<group>"; };
-		9CE885A01F2672310019EE49 /* ChallengedInvitationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengedInvitationTableViewController.swift; sourceTree = "<group>"; };
+		9CE885A21F2684430019EE49 /* GuestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestTableViewCell.swift; sourceTree = "<group>"; };
+		9CE885A41F26EA520019EE49 /* InvitationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationViewController.swift; sourceTree = "<group>"; };
 		A20F4DEF1F1515C00037EB24 /* LoginScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
 		A20F4DF01F1515C00037EB24 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		A20F4DF11F1515C00037EB24 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -142,11 +140,10 @@
 			isa = PBXGroup;
 			children = (
 				9CE8859C1F25616A0019EE49 /* Camera.storyboard */,
+				9CE885A21F2684430019EE49 /* GuestTableViewCell.swift */,
 				A20F4DFF1F1517C30037EB24 /* CameraViewController.swift */,
 				9C3360BA1F192705006EBDFF /* PhotoDestinationViewController.swift */,
-				9C81F1691F1F23CC003C510D /* Invitation.swift */,
-				9CE8859E1F258C180019EE49 /* dddChallengedInvitationTableViewController.swift */,
-				9CE885A01F2672310019EE49 /* ChallengedInvitationTableViewController.swift */,
+				9CE885A41F26EA520019EE49 /* InvitationViewController.swift */,
 			);
 			name = Camera;
 			sourceTree = "<group>";
@@ -461,14 +458,13 @@
 				9C0B988D1F127F9A00375C08 /* FirebaseLib.swift in Sources */,
 				A257120E1F0ECA840001376E /* PublicBattleViewController.swift in Sources */,
 				A257120C1F0ECA6E0001376E /* JudgeViewController.swift in Sources */,
+				9CE885A51F26EA520019EE49 /* InvitationViewController.swift in Sources */,
 				A22030BD1F154A080071E708 /* CustomImageFlowLayout.swift in Sources */,
 				A25712081F0ECA3E0001376E /* BattlesViewController.swift in Sources */,
 				9CA17E711F1F7E3900DC8FF3 /* ProfileViewController.swift in Sources */,
 				A22030BC1F154A080071E708 /* ImageCollectionViewCell.swift in Sources */,
-				9CE8859F1F258C180019EE49 /* dddChallengedInvitationTableViewController.swift in Sources */,
-				9CE885A11F2672310019EE49 /* ChallengedInvitationTableViewController.swift in Sources */,
+				9CE885A31F2684430019EE49 /* GuestTableViewCell.swift in Sources */,
 				9C0371B71F15736900E57048 /* UserData.swift in Sources */,
-				9C81F16A1F1F23CC003C510D /* Invitation.swift in Sources */,
 				AC94AD611B8E40BF002D9AD2 /* AppDelegate.swift in Sources */,
 				A20F4DF61F1515C00037EB24 /* LoginViewController.swift in Sources */,
 			);

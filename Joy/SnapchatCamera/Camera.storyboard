@@ -163,12 +163,83 @@
                     <connections>
                         <outlet property="takenPhotoView" destination="KHU-2r-xin" id="4LI-j6-zox"/>
                         <segue destination="rF2-5x-2jm" kind="presentation" identifier="PhotoDestinationToTabBar" id="ck4-gp-sTh"/>
-                        <segue destination="QM8-uI-CNz" kind="show" identifier="PhotoDestinationToChallengedInvitation" id="LCt-Uj-2Wn"/>
+                        <segue destination="s0I-tz-jqy" kind="show" identifier="PhotoDestinationToChallengedInvitation" id="RTS-TC-b17"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UBO-dD-L4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2036" y="2362"/>
+        </scene>
+        <!--Invitation View Controller-->
+        <scene sceneID="x6n-CM-f4m">
+            <objects>
+                <viewController id="s0I-tz-jqy" customClass="InvitationViewController" customModule="BattleFace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LYg-w4-q8s"/>
+                        <viewControllerLayoutGuide type="bottom" id="jMe-iL-FNX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YoF-b5-CrB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="152" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LbA-qu-R0I">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="guestCell" rowHeight="152" id="Vvw-aT-lbW" customClass="GuestTableViewCell" customModule="BattleFace" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="152"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vvw-aT-lbW" id="aj8-S1-Y0f" customClass="GuestTableViewCell" customModule="BattleFace" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="151.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Vc-da-CDs">
+                                                    <rect key="frame" x="0.0" y="8" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="FRt-bK-4Qp"/>
+                                                        <constraint firstAttribute="width" secondItem="5Vc-da-CDs" secondAttribute="height" multiplier="1:1" id="k0N-Nm-nrL"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ork-MI-2u3">
+                                                    <rect key="frame" x="205" y="48" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5Vc-da-CDs" firstAttribute="top" secondItem="aj8-S1-Y0f" secondAttribute="topMargin" id="JJz-5g-7tf"/>
+                                                <constraint firstItem="5Vc-da-CDs" firstAttribute="leading" secondItem="aj8-S1-Y0f" secondAttribute="leading" id="vif-w1-WG3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="profilePhotoImageView" destination="5Vc-da-CDs" id="0Al-mG-J7g"/>
+                                            <outlet property="usernameLabel" destination="ork-MI-2u3" id="iIG-cX-J0i"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="s0I-tz-jqy" id="Wdw-Wm-47c"/>
+                                    <outlet property="delegate" destination="s0I-tz-jqy" id="NGI-0a-oZP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LbA-qu-R0I" secondAttribute="trailing" id="NDJ-kF-SmK"/>
+                            <constraint firstItem="LbA-qu-R0I" firstAttribute="top" secondItem="LYg-w4-q8s" secondAttribute="bottom" id="OqY-uM-5xh"/>
+                            <constraint firstItem="LbA-qu-R0I" firstAttribute="leading" secondItem="YoF-b5-CrB" secondAttribute="leading" id="bdT-Ca-JIZ"/>
+                            <constraint firstItem="jMe-iL-FNX" firstAttribute="top" secondItem="LbA-qu-R0I" secondAttribute="bottom" id="edn-Cj-n5d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="LbA-qu-R0I" id="1IH-wj-yBb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbC-GO-I4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2853.5999999999999" y="2361.7691154422791"/>
         </scene>
         <!--TabBarControllerID-->
         <scene sceneID="WtG-go-0bV">
@@ -177,34 +248,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvX-eX-Ghx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2036" y="2836"/>
-        </scene>
-        <!--Challenged Invitation Table View Controller-->
-        <scene sceneID="CmS-1f-CKR">
-            <objects>
-                <tableViewController id="QM8-uI-CNz" customClass="ChallengedInvitationTableViewController" customModule="BattleFace" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yrV-Uz-Lkn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="JdK-Qn-5hq">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JdK-Qn-5hq" id="Kfe-2u-vGG">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="QM8-uI-CNz" id="UN4-Uj-f9s"/>
-                            <outlet property="delegate" destination="QM8-uI-CNz" id="mwR-ig-FqS"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mYI-lH-5JD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3030" y="2362"/>
         </scene>
         <!--Camera-->
         <scene sceneID="2f5-G1-QjA">

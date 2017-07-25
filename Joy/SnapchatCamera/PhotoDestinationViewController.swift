@@ -99,7 +99,7 @@ class PhotoDestinationViewController: UIViewController
                 print("Error fetching photo!")
                 return
             }
-            invitationViewController!.takenPhoto = self.takenPhotoView.image
+            //invitationViewController!.takenPhoto = self.takenPhotoView.image
         }
     }
 
