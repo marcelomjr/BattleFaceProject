@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ImageCollectionViewCell: UICollectionViewCell
-{
+class ImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
     override func prepareForReuse() {
         super.prepareForReuse()
         self.imageView.image = nil
         //self.imageView.transform = self.imageView.transform.rotated(by: CGFloat(Double.pi/2))
+        
     }
+    
 }

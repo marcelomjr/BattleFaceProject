@@ -163,4 +163,17 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         
         return cell
     }
+    
+    // go photo
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        
+        // send photo to cellImage variable
+        cellImage = images[indexPath.row]
+        
+        self.performSegue(withIdentifier: "ProfileToPhoto", sender: self)
+        
+        
+    }
+    
 }
