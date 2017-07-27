@@ -8,39 +8,30 @@
 
 import UIKit
 
-class InvitationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate //UISearchBarDelegate
+class InvitationViewController: UIViewController
 {
-    var titles = ["Clara", "Lucas", "Marcelo"]
     
-//    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var takenPhotoImageView: UIImageView!
+    var takenPhoto = UIImage()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
- //       createSearchBar()
+        self.takenPhotoImageView.image = self.takenPhoto
     }
     
-    func createSearchBar()
+    func photoSetup()
     {
-//        self.searchController.searchBar.placeholder = "Find a friend to challenge!"
-//        self.searchController.searchBar.setShowsCancelButton(true, animated: true)
-//        self.searchBar = self.searchController.searchBar
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        return titles.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "guestCell", for: indexPath) as! GuestTableViewCell
-        cell.profilePhotoImageView.image = UIImage(named: "Face1")
-        cell.usernameLabel.text = titles[indexPath.row]
-        
-        return cell
         
     }
     
+    @IBAction func searchChallengedButton(_ sender: Any)
+    {
+        self.performSegue(withIdentifier: "InvitationToFindUser", sender: nil)
+    }
+    
+    @IBAction func searchJudgeButton(_ sender: Any)
+    {
+        self.performSegue(withIdentifier: "InvitationToFindUser", sender: nil)
+    }
 }

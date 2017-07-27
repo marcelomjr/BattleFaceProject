@@ -33,7 +33,7 @@ class PhotoDestinationViewController: UIViewController
         }
         FirebaseLib.demo(photoData: photoData)
         
-         performSegue(withIdentifier: "PhotoDestinationToChallengedInvitation", sender: nil)
+         performSegue(withIdentifier: "PhotoDestinationToInvitation", sender: nil)
     }
     
     override func viewDidLoad()
@@ -94,12 +94,13 @@ class PhotoDestinationViewController: UIViewController
                 print("Error fetching InvitationViewController!")
                 return
             }
-            guard self.takenPhoto != nil else
+            guard let photo = self.takenPhotoView.image else
             {
                 print("Error fetching photo!")
                 return
             }
-            //invitationViewController!.takenPhoto = self.takenPhotoView.image
+            
+            invitationViewController!.takenPhoto = photo
         }
     }
 

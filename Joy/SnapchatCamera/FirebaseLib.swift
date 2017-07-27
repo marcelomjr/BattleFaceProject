@@ -325,10 +325,15 @@ class FirebaseLib
                     user.child("photosNumber").setValue("0")
                 }
                 
+                // Create the public profile
+                let publicProfile = ref.child("publicProfiles").child(username)
+                publicProfile.child("name").setValue(name)
+                
                 
                 // Set the userID in this device
                 Log.deviceLogIn(userID: userID)
                 
+                // Set the user in
                 let usersTable = ref.child("usersTable")
 
                 if usersTable != nil
@@ -474,5 +479,36 @@ class FirebaseLib
                     }
             })
         }
+    }
+    
+    static func searchUser(path: String, key: String, completionHandler: @escaping (Error?, NSDictionary?)->Void)
+    {
+        let searchRange: UInt = 100
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        let userQuery = ref.child(path)
+        userQuery.queryOrderedByKey().queryLimited(toFirst: searchRange).queryStarting(atValue: key).observeSingleEvent(of: .value, with:
+        { (snapshot) in
+
+            guard let users = snapshot.value as? NSDictionary else
+            {
+                print("Error at searchUser")///>>>>>> Aqui nao precisa de dispatchQueue...
+                DispatchQueue.main.async
+                {
+                    completionHandler(nil, nil)
+                }
+                return
+            }
+            
+            DispatchQueue.main.async // >>>>> Pq precisa disso já que o snapshot só é gerado quando já fez o download.
+            {
+                completionHandler(nil, users)
+            }
+        })
+        
+        
+
+        
     }
 }

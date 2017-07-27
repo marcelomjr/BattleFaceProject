@@ -116,7 +116,7 @@
                         <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Gb-2M-WL4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4Gb-2M-WL4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -344,131 +344,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rb6-of-rA3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6771" y="2704"/>
-        </scene>
-        <!--Invite to Battle-->
-        <scene sceneID="YA0-QD-VUn">
-            <objects>
-                <viewController id="MWK-Z0-7ZB" customClass="InvitationViewController" customModule="BattleFace" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9iY-Wo-md5"/>
-                        <viewControllerLayoutGuide type="bottom" id="Mv5-24-y3J"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Oo9-tk-vSu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g5z-iv-NtN">
-                                <rect key="frame" x="0.0" y="482" width="375" height="185"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6s-fL-wzL">
-                                <rect key="frame" x="16" y="607" width="161.5" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="ViT-xS-756"/>
-                                </constraints>
-                                <state key="normal" title="Cancel" backgroundImage="buttonBG">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelButton:" destination="MWK-Z0-7ZB" eventType="touchUpInside" id="dHc-Vt-uI5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNB-rl-dN1">
-                                <rect key="frame" x="197.5" y="607" width="161.5" height="40"/>
-                                <state key="normal" title="Send" backgroundImage="buttonBG">
-                                    <color key="titleColor" red="0.0" green="0.58242100480000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="buildBattle:" destination="MWK-Z0-7ZB" eventType="touchUpInside" id="ZfV-Fy-icA"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pbg" translatesAutoresizingMaskIntoConstraints="NO" id="AX6-Dz-th5">
-                                <rect key="frame" x="16" y="20" width="343" height="462"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZW-bI-HDJ">
-                                <rect key="frame" x="197.5" y="547" width="161.5" height="40"/>
-                                <state key="normal" title="Search" backgroundImage="buttonBG">
-                                    <color key="titleColor" red="0.9516311288" green="0.050255946820000001" blue="0.48363977670000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="searchJudge:" destination="MWK-Z0-7ZB" eventType="touchUpInside" id="qH1-C7-prs"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Challenge a friend" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VIg-DM-SRn">
-                                <rect key="frame" x="16" y="487" width="161.5" height="40"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Invite a Judge" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mgH-aj-3tS">
-                                <rect key="frame" x="16" y="547" width="161.5" height="40"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0d-fY-P6Y">
-                                <rect key="frame" x="197.5" y="487" width="161.5" height="40"/>
-                                <state key="normal" title="Search" backgroundImage="buttonBG">
-                                    <color key="titleColor" red="0.001646719174" green="0.83251303430000001" blue="0.58630466459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="searchGuest:" destination="MWK-Z0-7ZB" eventType="touchUpInside" id="Y3m-bu-NaQ"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="TNB-rl-dN1" firstAttribute="height" secondItem="s6s-fL-wzL" secondAttribute="height" id="1gi-Ur-w3x"/>
-                            <constraint firstItem="qZW-bI-HDJ" firstAttribute="top" secondItem="i0d-fY-P6Y" secondAttribute="bottom" constant="20" id="76r-EO-QQz"/>
-                            <constraint firstItem="mgH-aj-3tS" firstAttribute="top" secondItem="VIg-DM-SRn" secondAttribute="bottom" constant="20" id="8OT-Zq-0am"/>
-                            <constraint firstItem="AX6-Dz-th5" firstAttribute="trailing" secondItem="Oo9-tk-vSu" secondAttribute="trailingMargin" id="ECU-50-akv"/>
-                            <constraint firstItem="i0d-fY-P6Y" firstAttribute="top" secondItem="AX6-Dz-th5" secondAttribute="bottom" constant="5" id="HXv-IX-9g6"/>
-                            <constraint firstItem="i0d-fY-P6Y" firstAttribute="height" secondItem="qZW-bI-HDJ" secondAttribute="height" id="JfX-nC-uKf"/>
-                            <constraint firstItem="Mv5-24-y3J" firstAttribute="top" secondItem="g5z-iv-NtN" secondAttribute="bottom" id="Jjh-pW-Dx9"/>
-                            <constraint firstItem="mgH-aj-3tS" firstAttribute="height" secondItem="qZW-bI-HDJ" secondAttribute="height" id="JmU-gx-Xt7"/>
-                            <constraint firstItem="mgH-aj-3tS" firstAttribute="leading" secondItem="Oo9-tk-vSu" secondAttribute="leadingMargin" id="KbQ-ej-FmK"/>
-                            <constraint firstItem="AX6-Dz-th5" firstAttribute="top" secondItem="9iY-Wo-md5" secondAttribute="bottom" id="L9J-lC-ccM"/>
-                            <constraint firstItem="TNB-rl-dN1" firstAttribute="leading" secondItem="s6s-fL-wzL" secondAttribute="trailing" constant="20" id="MKn-LD-m1Y"/>
-                            <constraint firstItem="mgH-aj-3tS" firstAttribute="width" secondItem="s6s-fL-wzL" secondAttribute="width" id="NFv-Sp-vMm"/>
-                            <constraint firstItem="s6s-fL-wzL" firstAttribute="width" secondItem="TNB-rl-dN1" secondAttribute="width" id="Osy-Ke-ObR"/>
-                            <constraint firstItem="VIg-DM-SRn" firstAttribute="height" secondItem="mgH-aj-3tS" secondAttribute="height" id="SW4-uk-fSy"/>
-                            <constraint firstItem="g5z-iv-NtN" firstAttribute="leading" secondItem="Oo9-tk-vSu" secondAttribute="leading" id="WIv-gX-EaX"/>
-                            <constraint firstItem="qZW-bI-HDJ" firstAttribute="width" secondItem="TNB-rl-dN1" secondAttribute="width" id="XTr-kI-vHg"/>
-                            <constraint firstItem="qZW-bI-HDJ" firstAttribute="height" secondItem="TNB-rl-dN1" secondAttribute="height" id="Z9E-se-QvY"/>
-                            <constraint firstItem="Mv5-24-y3J" firstAttribute="top" secondItem="s6s-fL-wzL" secondAttribute="bottom" constant="20" id="aCz-Uj-gvP"/>
-                            <constraint firstAttribute="trailing" secondItem="g5z-iv-NtN" secondAttribute="trailing" id="bc4-MN-qAY"/>
-                            <constraint firstItem="s6s-fL-wzL" firstAttribute="leading" secondItem="Oo9-tk-vSu" secondAttribute="leadingMargin" id="coE-Xe-4KX"/>
-                            <constraint firstItem="AX6-Dz-th5" firstAttribute="leading" secondItem="Oo9-tk-vSu" secondAttribute="leadingMargin" id="dcs-gO-cCM"/>
-                            <constraint firstItem="VIg-DM-SRn" firstAttribute="width" secondItem="mgH-aj-3tS" secondAttribute="width" id="eQi-RK-FH0"/>
-                            <constraint firstItem="i0d-fY-P6Y" firstAttribute="width" secondItem="qZW-bI-HDJ" secondAttribute="width" id="fRm-uh-GHH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="TNB-rl-dN1" secondAttribute="trailing" id="hAa-e7-PCQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qZW-bI-HDJ" secondAttribute="trailing" id="k5b-ol-bAb"/>
-                            <constraint firstItem="VIg-DM-SRn" firstAttribute="leading" secondItem="Oo9-tk-vSu" secondAttribute="leadingMargin" id="lvC-mg-LM3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="i0d-fY-P6Y" secondAttribute="trailing" id="piz-ZJ-Tse"/>
-                            <constraint firstItem="TNB-rl-dN1" firstAttribute="top" secondItem="qZW-bI-HDJ" secondAttribute="bottom" constant="20" id="qQv-XP-oNy"/>
-                            <constraint firstItem="Mv5-24-y3J" firstAttribute="top" secondItem="TNB-rl-dN1" secondAttribute="bottom" constant="20" id="sXq-Vv-yKt"/>
-                            <constraint firstItem="s6s-fL-wzL" firstAttribute="top" secondItem="mgH-aj-3tS" secondAttribute="bottom" constant="20" id="sqs-VA-tZD"/>
-                            <constraint firstItem="g5z-iv-NtN" firstAttribute="top" secondItem="AX6-Dz-th5" secondAttribute="bottom" id="yC3-pK-WDF"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Invite to Battle" id="BPd-zE-O1h"/>
-                    <connections>
-                        <outlet property="guestTextField" destination="VIg-DM-SRn" id="iA8-Wd-iGn"/>
-                        <outlet property="judgeTextField" destination="mgH-aj-3tS" id="p54-fS-Vg9"/>
-                        <outlet property="takenPhotoView" destination="AX6-Dz-th5" id="WlV-zb-VUp"/>
-                        <segue destination="ung-y2-Z7w" kind="presentation" identifier="InvitationToTabBar" id="uWj-eN-R63"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YEw-7Y-7b9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3514" y="1905"/>
-        </scene>
-        <!--TabBarControllerID-->
-        <scene sceneID="Hiv-Mz-whC">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="TabBarControllerID" id="ung-y2-Z7w" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sCx-eW-ahq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3017" y="2264"/>
         </scene>
         <!--Judge Battle-->
         <scene sceneID="CUw-h7-p55">
@@ -965,7 +840,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cZR-5S-t0i" customClass="NavigationViewController" customModule="BattleFace" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Discover" image="world" selectedImage="worldSelected" id="xKy-fX-asQ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xbn-M3-Xra">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xbn-M3-Xra">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -984,7 +859,6 @@
         <image name="avatar" width="400" height="400"/>
         <image name="battles" width="40" height="40"/>
         <image name="battlesSelected" width="40" height="40"/>
-        <image name="buttonBG" width="640" height="320"/>
         <image name="gavel" width="40" height="40"/>
         <image name="gavelSelected" width="40" height="40"/>
         <image name="logout" width="25" height="25"/>
