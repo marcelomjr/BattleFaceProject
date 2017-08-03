@@ -1,0 +1,51 @@
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "2v6-mj-EEK"; */
+"2v6-mj-EEK.normalTitle" = "Cancel";
+
+/* Class = "UINavigationItem"; title = "Invite to Battle"; ObjectID = "5fT-t7-ASw"; */
+"5fT-t7-ASw.title" = "Invite to Battle";
+
+/* Class = "UIButton"; normalTitle = "Search the Judge"; ObjectID = "B9A-Pg-7zQ"; */
+"B9A-Pg-7zQ.normalTitle" = "Search the Judge";
+
+/* Class = "UITextField"; placeholder = "Type a label"; ObjectID = "Cgn-DU-B8Y"; */
+"Cgn-DU-B8Y.placeholder" = "Type a label";
+
+/* Class = "UITabBarItem"; title = "Camera"; ObjectID = "HPW-gN-6pM"; */
+"HPW-gN-6pM.title" = "Camera";
+
+/* Class = "UIButton"; normalTitle = "Battle"; ObjectID = "LW2-EC-f80"; */
+"LW2-EC-f80.normalTitle" = "Battle";
+
+/* Class = "UINavigationItem"; title = "Photo Confirmation"; ObjectID = "OAp-hE-3NB"; */
+"OAp-hE-3NB.title" = "Photo Confirmation";
+
+/* Class = "UIButton"; normalTitle = "Search the Challenged"; ObjectID = "Tre-ho-Ipu"; */
+"Tre-ho-Ipu.normalTitle" = "Search the Challenged";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "TxX-m0-y0W"; */
+"TxX-m0-y0W.title" = "Back";
+
+/* Class = "UILabel"; text = "username"; ObjectID = "ddI-iJ-0d6"; */
+"ddI-iJ-0d6.text" = "username";
+
+/* Class = "UILabel"; text = "username"; ObjectID = "eqf-8D-qAf"; */
+"eqf-8D-qAf.text" = "username";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "fC7-3h-4p2"; */
+"fC7-3h-4p2.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Post"; ObjectID = "lGb-R7-xUO"; */
+"lGb-R7-xUO.normalTitle" = "Post";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "nfw-Cz-QKe"; */
+"nfw-Cz-QKe.normalTitle" = "Cancel";
+
+/* Class = "UINavigationItem"; title = "Select a Challenged"; ObjectID = "seA-C2-WFV"; */
+"seA-C2-WFV.title" = "Select a Challenged";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "vD2-Fc-VMy"; */
+"vD2-Fc-VMy.normalTitle" = "Send";
+
+/* Class = "UINavigationItem"; title = "Camera"; ObjectID = "xGw-mG-JXu"; */
+"xGw-mG-JXu.title" = "Camera";

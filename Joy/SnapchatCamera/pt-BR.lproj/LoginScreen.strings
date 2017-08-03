@@ -1,0 +1,36 @@
+
+/* Class = "UITextField"; placeholder = "age"; ObjectID = "Eja-uT-3SQ"; */
+"Eja-uT-3SQ.placeholder" = "Idade";
+
+/* Class = "UITextField"; placeholder = "email"; ObjectID = "JE2-vK-dy9"; */
+"JE2-vK-dy9.placeholder" = "E-mail";
+
+/* Class = "UITextField"; placeholder = "username"; ObjectID = "Oep-je-FqR"; */
+"Oep-je-FqR.placeholder" = "username";
+
+/* Class = "UITextField"; placeholder = "full name"; ObjectID = "TGf-9h-e9l"; */
+"TGf-9h-e9l.placeholder" = "Nome completo";
+
+/* Class = "UITextField"; placeholder = "email"; ObjectID = "Tep-cz-gKh"; */
+"Tep-cz-gKh.placeholder" = "E-mail";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "UQx-6v-Wzy"; */
+"UQx-6v-Wzy.normalTitle" = "Cadastrar";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "W6x-eD-XGo"; */
+"W6x-eD-XGo.placeholder" = "Senha";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "YRB-xM-DRa"; */
+"YRB-xM-DRa.normalTitle" = "Cancelar";
+
+/* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "ZYm-cH-Yzn"; */
+"ZYm-cH-Yzn.normalTitle" = "Entrar";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "ewG-j2-3B6"; */
+"ewG-j2-3B6.placeholder" = "Senha";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "k2f-dB-rCr"; */
+"k2f-dB-rCr.normalTitle" = "Cadastrar";
+
+/* Class = "UIButton"; normalTitle = "forgot password?"; ObjectID = "xX6-Oa-YSx"; */
+"xX6-Oa-YSx.normalTitle" = "Esqueceu sua senha?";
