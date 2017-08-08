@@ -74,7 +74,7 @@ class FirebaseLib
         // Create a reference as the path of image tha will be saved
         let imageRef = storageRef.child(reference)
         
-        print("vai tentar subir")
+        print("vai subir")
         // Upload the file to the path
         imageRef.putData(photoData, metadata: nil)
         { (metadata, error) in
@@ -326,8 +326,7 @@ class FirebaseLib
                 }
                 
                 // Create the public profile
-                let publicProfile = ref.child("publicProfiles").child(username)
-                publicProfile.child("name").setValue(name)
+               ref.child("publicProfiles").child(username).setValue(name)
                 
                 
                 // Set the userID in this device
@@ -447,7 +446,7 @@ class FirebaseLib
         return userPath
     }
     
-    static func demo(photoData: Data)
+    static func demo()
     {
         guard let user = FirebaseLib.getUsername() else
         {
@@ -457,10 +456,29 @@ class FirebaseLib
     
         var ref: DatabaseReference!
         ref = Database.database().reference()
-        ref.child("demo").child("lastPhoto").child("user").setValue(user)
         
-        self.storePhoto(reference: "demo/lastPhoto/photo", photoData: photoData)
+        // Adicionando um único filho
+//        ref.child("Teste/escola/alunos/nome").setValue("Pedro")
+//        ref.child("Teste/escola/alunos/nome").setValue("Paulo")
+//        
+//        ref.child("Teste").child("escola").child("aluno").child("nome").setValue("Joao")
+        
+        
+        /* Adicionar varios filhos */
+        let alunos = ref.child("agoravai")
+        alunos.child("aluno1").setValue("Marcelo")
+        alunos.child("aluno2").setValue("Marcela")
+        
+
+//        /* Upload de arquivo */
+//        let photo = UIImage(named: "Face3")
+//        let photoData = UIImagePNGRepresentation(photo!)
+//        
+//        self.storePhoto(reference: "demo/lastPhoto/photo", photoData: photoData!)
     }
+    
+    
+    
     static func getDemoUser(completionHandler: @escaping (String?) -> Void)
     {
         var ref: DatabaseReference!

@@ -28,12 +28,18 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     var takenPhoto: UIImage?
     
+    var battleWasBuilt:Bool = false
     
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
         
         self.navigationController?.navigationBar.isHidden = true
+        
+        if self.battleWasBuilt
+        {
+            self.dismiss(animated: true, completion: {})
+        }
     }
     
     override func viewDidLoad()

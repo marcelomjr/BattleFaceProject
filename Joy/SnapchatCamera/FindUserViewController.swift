@@ -8,49 +8,65 @@
 
 import UIKit
 
-class FindUser: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate
+class FindUserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate
 {
     var searchBarController = UISearchController()
     var resultsController = UITableViewController()
+    var battle: Battle?
     
+    @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     
+    let usersDemo: [String] = [String]()
+    var foundUsers: [String]?
     
-    let usersDemo = ["Lucas","Clara","Marcelo"]
-    var usernames: [String]?
+    var findJudge: Bool = false
     
-    var defaultTableView: Bool = true // bool to indicate if is to use de default table view
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        // Setup of search bar and search bar controller
         self.searchBarController = UISearchController(searchResultsController: resultsController)
         self.searchBarController.searchResultsUpdater = self
         self.searchBarController.searchBar.delegate = self
         self.searchBarController.hidesNavigationBarDuringPresentation = false
         
         
+        // Setup of default table
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
         self.tableView.tableHeaderView = searchBarController.searchBar
         
-        
+        // Setup of results table
         self.resultsController.tableView.delegate = self
         self.resultsController.tableView.dataSource = self
         
-
-        
+        if (self.findJudge)
+        {
+            self.navigationController?.title = "Search and Select a Judge"
+        }
+        else
+        {
+            self.navigationController?.title = "Search and Select a Guest"
+        }
     }
+    
     func findUserStartingBy(key: String)
     {
         FirebaseLib.searchUser(path: "publicProfiles", key: key)
-        { (error, foundUsers) in
-            guard let users = foundUsers else
+        { (error, usernames) in
+            guard let users = usernames else
             {
                 print("Error at search users")
-                self.usernames = nil
+                self.foundUsers = nil
                 self.resultsController.tableView.reloadData()
                 return
             }
             
-            self.usernames = (foundUsers!.allKeys as? [String])?.sorted()
+            self.foundUsers = (users.allKeys as? [String])?.sorted()
+            
+            // reload the table
             self.resultsController.tableView.reloadData()
         }
 
@@ -63,18 +79,18 @@ class FindUser: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        if defaultTableView
+        if tableView == self.resultsController.tableView
         {
-            return usersDemo.count
-        }
-        else
-        {
-            guard let usersNumber = usernames?.count else
+            guard let usersNumber = self.foundUsers?.count else
             {
                 print("Error at tableview numberofRows...")
                 return 0
             }
             return usersNumber
+        }
+        else
+        {
+            return usersDemo.count
         }
     }
 
@@ -82,20 +98,21 @@ class FindUser: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     {
         let cell = UITableViewCell()
 
-        if defaultTableView
+        if tableView == self.resultsController.tableView
         {
-            cell.textLabel?.text = usersDemo[indexPath.row]
-        }
-        
-        else
-        {
-            guard let users = usernames else
+            guard let users = self.foundUsers else
             {
                 print("Error at tableview cellForRowAt...")
+                cell.textLabel?.text = "Error"
+                
                 return cell
                 
             }
             cell.textLabel?.text = users[indexPath.row]
+        }
+        else
+        {
+            cell.textLabel?.text = usersDemo[indexPath.row]
         }
         
         //let cell = tableView.dequeueReusableCell(withIdentifier: "guestCell", for: indexPath)
@@ -114,17 +131,8 @@ class FindUser: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         }
         if text.characters.count > 0
         {
-            self.defaultTableView = false
             findUserStartingBy(key: text)
         }
-        // Search bar is empty
-        else
-        {
-            // Show the default table view
-            self.defaultTableView = true
-            self.tableView.reloadData()
-        }
-        
     }
     
     
@@ -134,8 +142,6 @@ class FindUser: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
         self.tableViewTopConstraint.constant = -self.topLayoutGuide.length
-        
-        print("comecouuu")
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar)
@@ -144,9 +150,32 @@ class FindUser: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         
         self.tableViewTopConstraint.constant = +self.topLayoutGuide.length
-       
-        print("acabouuu")
     }
 
-    @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        if tableView == self.resultsController.tableView
+        {
+            guard let user = self.foundUsers?[indexPath.row] else
+            {
+                print("username not found at didSelectRowAt")
+                return
+            }
+            
+            if (self.findJudge)
+            {
+                self.battle?.setJudge(username: user)
+            }
+            else
+            {
+                self.battle?.setGuest(username: user)
+            }
+            
+        }
+        
+        self.searchBarController.isActive = false
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

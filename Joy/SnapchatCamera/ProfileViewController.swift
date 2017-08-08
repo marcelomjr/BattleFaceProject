@@ -18,6 +18,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     var customImageFlowLayout: CustomImageFlowLayout!
     
     var images = [UIImage]()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -83,9 +84,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     func loadImages()
     {
         print("load imagens")
-        self.loadProfilePhoto()
         self.images.removeAll()
-//        self.photoCollection.reloadData()
         
         FirebaseLib.getPhotosPath
         {
@@ -103,6 +102,8 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
             }
             
             let photosNumber = photosRef.count
+            
+            
             
             
             for photoIndex in 0 ..< photosNumber

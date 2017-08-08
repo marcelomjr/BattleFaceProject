@@ -18,43 +18,6 @@ class PublicBattlesViewController: UIViewController
     
     @IBAction func loadImage(_ sender: Any)
     {
-        updataImage()
-    }
-    func updataImage()
-    {
-        self.activityIndicator.startAnimating()
         
-        
-        FirebaseLib.downloadImage(reference: "demo/lastPhoto/photo", completionHandler:
-            {
-                (error, photo) in
-                guard photo != nil else
-                {
-                    print("Error in photo")
-                    return
-                }
-                self.image.image = photo
-                
-                
-                FirebaseLib.getDemoUser
-                    {
-                        (user) in
-                        guard user != nil else
-                        {
-                            print("User not found!")
-                            return
-                        }
-                        self.label.text = user
-                }
-                self.activityIndicator.stopAnimating()
-        })
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.image.transform = self.image.transform.rotated(by: CGFloat(Double.pi/2))
-    }
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        updataImage()
-//    }
 }

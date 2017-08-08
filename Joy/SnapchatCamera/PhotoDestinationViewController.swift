@@ -31,9 +31,8 @@ class PhotoDestinationViewController: UIViewController
             print("Error in convertion")
             return
         }
-        FirebaseLib.demo(photoData: photoData)
         
-         performSegue(withIdentifier: "PhotoDestinationToInvitation", sender: nil)
+        performSegue(withIdentifier: "PhotoDestinationToInvitation", sender: nil)
     }
     
     override func viewDidLoad()
