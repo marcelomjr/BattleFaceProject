@@ -1,0 +1,138 @@
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "1Ph-5L-Ny3"; */
+"1Ph-5L-Ny3.normalTitle" = "Cancelar";
+
+/* Class = "UINavigationItem"; title = "Judgements"; ObjectID = "38Z-Y9-ip1"; */
+"38Z-Y9-ip1.title" = "Julgamentos";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "5cx-JO-a6g"; */
+"5cx-JO-a6g.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Battles"; ObjectID = "5dh-ud-2P0"; */
+"5dh-ud-2P0.title" = "Batalhas";
+
+/* Class = "UILabel"; text = "Host"; ObjectID = "7go-nG-neT"; */
+"7go-nG-neT.text" = "Desafiante";
+
+/* Class = "UILabel"; text = "Battles"; ObjectID = "8kg-yJ-7Xp"; */
+"8kg-yJ-7Xp.text" = "Batalhas";
+
+/* Class = "UIViewController"; title = "Judge Battle"; ObjectID = "8xN-Ui-PCl"; */
+"8xN-Ui-PCl.title" = "Julgar Batalha";
+
+/* Class = "UILabel"; text = "Host"; ObjectID = "BbZ-0P-dWc"; */
+"BbZ-0P-dWc.text" = "Desafiante";
+
+/* Class = "UILabel"; text = "03"; ObjectID = "CX2-yp-RYo"; */
+"CX2-yp-RYo.text" = "03";
+
+/* Class = "UIButton"; normalTitle = "Vote"; ObjectID = "GSG-42-wwE"; */
+"GSG-42-wwE.normalTitle" = "Vote";
+
+/* Class = "UIButton"; normalTitle = "Username"; ObjectID = "Gxu-Xk-tx2"; */
+"Gxu-Xk-tx2.normalTitle" = "Username";
+
+/* Class = "UILabel"; text = "Victories"; ObjectID = "I18-i4-kMo"; */
+"I18-i4-kMo.text" = "Vitórias";
+
+/* Class = "UILabel"; text = "Guest"; ObjectID = "Jy8-cY-e7f"; */
+"Jy8-cY-e7f.text" = "Convidado";
+
+/* Class = "UIButton"; normalTitle = "Join"; ObjectID = "NGi-kr-b5c"; */
+"NGi-kr-b5c.normalTitle" = "Entrar";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "R05-kx-HNS"; */
+"R05-kx-HNS.title" = "Item";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Rz5-7J-RmH"; */
+"Rz5-7J-RmH.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Username"; ObjectID = "Sus-gR-XbU"; */
+"Sus-gR-XbU.normalTitle" = "Username";
+
+/* Class = "UITabBarItem"; title = "Judgements"; ObjectID = "T64-IV-nMs"; */
+"T64-IV-nMs.title" = "Julgamentos";
+
+/* Class = "UIButton"; normalTitle = "Vote"; ObjectID = "TGg-pL-gfR"; */
+"TGg-pL-gfR.normalTitle" = "Vote";
+
+/* Class = "UIViewController"; title = "Join Battle"; ObjectID = "UcX-s1-kY3"; */
+"UcX-s1-kY3.title" = "Entrar na Batalha";
+
+/* Class = "UITabBarItem"; title = "Battles"; ObjectID = "Uge-CD-B5e"; */
+"Uge-CD-B5e.title" = "Batalhas";
+
+/* Class = "UISegmentedControl"; Vgu-Io-zck.segmentTitles[0] = "To Judge"; ObjectID = "Vgu-Io-zck"; */
+"Vgu-Io-zck.segmentTitles[0]" = "Para Julgar";
+
+/* Class = "UISegmentedControl"; Vgu-Io-zck.segmentTitles[1] = "Judged"; ObjectID = "Vgu-Io-zck"; */
+"Vgu-Io-zck.segmentTitles[1]" = "Julgados";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "XD7-zT-slH"; */
+"XD7-zT-slH.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Username"; ObjectID = "avj-5N-uX5"; */
+"avj-5N-uX5.normalTitle" = "Username";
+
+/* Class = "UIButton"; normalTitle = "Username"; ObjectID = "azy-ix-708"; */
+"azy-ix-708.normalTitle" = "Username";
+
+/* Class = "UILabel"; text = "Make your best  battlle face!"; ObjectID = "bEG-VA-MdU"; */
+"bEG-VA-MdU.text" = "Faça sua melhor careta!";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "dEl-81-6tn"; */
+"dEl-81-6tn.title" = "Perfil";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "drX-D4-5oK"; */
+"drX-D4-5oK.text" = "Label";
+
+/* Class = "UILabel"; text = "..."; ObjectID = "dxj-tl-soe"; */
+"dxj-tl-soe.text" = "...";
+
+/* Class = "UIBarButtonItem"; title = "Reload"; ObjectID = "ecc-FJ-j1y"; */
+"ecc-FJ-j1y.title" = "Recarregar";
+
+/* Class = "UINavigationItem"; title = "Username"; ObjectID = "eo5-Ox-sKt"; */
+"eo5-Ox-sKt.title" = "Username";
+
+/* Class = "UISegmentedControl"; hCL-j6-Xxe.segmentTitles[0] = "All"; ObjectID = "hCL-j6-Xxe"; */
+"hCL-j6-Xxe.segmentTitles[0]" = "Todos";
+
+/* Class = "UISegmentedControl"; hCL-j6-Xxe.segmentTitles[1] = "Waiting"; ObjectID = "hCL-j6-Xxe"; */
+"hCL-j6-Xxe.segmentTitles[1]" = "Aguardando";
+
+/* Class = "UISegmentedControl"; hCL-j6-Xxe.segmentTitles[2] = "Won"; ObjectID = "hCL-j6-Xxe"; */
+"hCL-j6-Xxe.segmentTitles[2]" = "Vitórias";
+
+/* Class = "UISegmentedControl"; hCL-j6-Xxe.segmentTitles[3] = "Lost"; ObjectID = "hCL-j6-Xxe"; */
+"hCL-j6-Xxe.segmentTitles[3]" = "Perdidas";
+
+/* Class = "UILabel"; text = "Judge"; ObjectID = "hcn-kb-XMZ"; */
+"hcn-kb-XMZ.text" = "Juíz";
+
+/* Class = "UIBarButtonItem"; title = "Reload"; ObjectID = "ioa-cs-PZx"; */
+"ioa-cs-PZx.title" = "Recarregar";
+
+/* Class = "UINavigationItem"; title = "Battle Face"; ObjectID = "kFi-Gp-Rdh"; */
+"kFi-Gp-Rdh.title" = "Battle Face";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nwm-vE-cX2"; */
+"nwm-vE-cX2.text" = "Label";
+
+/* Class = "UILabel"; text = "12"; ObjectID = "tqp-c4-7c1"; */
+"tqp-c4-7c1.text" = "12";
+
+/* Class = "UILabel"; text = "06"; ObjectID = "uxX-zx-jcC"; */
+"uxX-zx-jcC.text" = "06";
+
+/* Class = "UITabBarItem"; title = "Discover"; ObjectID = "xKy-fX-asQ"; */
+"xKy-fX-asQ.title" = "Descobrir";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "yhY-w8-3Hx"; */
+"yhY-w8-3Hx.text" = "Label";
+
+/* Class = "UILabel"; text = "Judged"; ObjectID = "z2s-v9-mNX"; */
+"z2s-v9-mNX.text" = "Julgado";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zEn-US-kXD"; */
+"zEn-US-kXD.text" = "Label";

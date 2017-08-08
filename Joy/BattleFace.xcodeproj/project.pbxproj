@@ -16,18 +16,17 @@
 		9C5218F21F0C249A00D2D201 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C5218F11F0C249A00D2D201 /* GoogleService-Info.plist */; };
 		9C7994431F28E2CD006B74FE /* FindUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7994421F28E2CD006B74FE /* FindUserViewController.swift */; };
 		9CA17E711F1F7E3900DC8FF3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA17E701F1F7E3900DC8FF3 /* ProfileViewController.swift */; };
+
 		9CE8859D1F25616A0019EE49 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE8859C1F25616A0019EE49 /* Camera.storyboard */; };
 		9CE885A31F2684430019EE49 /* GuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE885A21F2684430019EE49 /* GuestTableViewCell.swift */; };
 		9CE885A51F26EA520019EE49 /* InvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE885A41F26EA520019EE49 /* InvitationViewController.swift */; };
 		A20CD8BF1F2776BE00D8C4E1 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CD8BE1F2776BE00D8C4E1 /* ImageViewController.swift */; };
-		A20F4DF31F1515C00037EB24 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20F4DEF1F1515C00037EB24 /* LoginScreen.storyboard */; };
 		A20F4DF41F1515C00037EB24 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4DF01F1515C00037EB24 /* LoginScreenViewController.swift */; };
 		A20F4DF51F1515C00037EB24 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4DF11F1515C00037EB24 /* RegisterViewController.swift */; };
 		A20F4DF61F1515C00037EB24 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4DF21F1515C00037EB24 /* LoginViewController.swift */; };
 		A20F4DFA1F1516750037EB24 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20F4DF71F1516750037EB24 /* Images.xcassets */; };
 		A20F4DFB1F1516750037EB24 /* pp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A20F4DF81F1516750037EB24 /* pp.jpg */; };
 		A20F4DFC1F1516750037EB24 /* battlelines.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A20F4DF91F1516750037EB24 /* battlelines.ttf */; };
-		A20F4DFE1F1517960037EB24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20F4DFD1F1517960037EB24 /* Main.storyboard */; };
 		A20F4E001F1517C30037EB24 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4DFF1F1517C30037EB24 /* CameraViewController.swift */; };
 		A20F4E031F1517DB0037EB24 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4E011F1517DB0037EB24 /* TabBarViewController.swift */; };
 		A20F4E041F1517DB0037EB24 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F4E021F1517DB0037EB24 /* NavigationViewController.swift */; };
@@ -38,6 +37,10 @@
 		A257120E1F0ECA840001376E /* PublicBattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A257120D1F0ECA840001376E /* PublicBattleViewController.swift */; };
 		AC94AD611B8E40BF002D9AD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94AD601B8E40BF002D9AD2 /* AppDelegate.swift */; };
 		AC94AD6B1B8E40BF002D9AD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC94AD691B8E40BF002D9AD2 /* LaunchScreen.xib */; };
+		E64272371F3369D800005133 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64272391F3369D800005133 /* Camera.storyboard */; };
+		E642723E1F336A7500005133 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64272401F336A7500005133 /* Main.storyboard */; };
+		E64272431F336C8700005133 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64272451F336C8700005133 /* LoginScreen.storyboard */; };
+		E64272491F336D0A00005133 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E64272481F336D0A00005133 /* Localizable.strings */; };
 		E652A2AC1F193DEF00522311 /* JudgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E652A2AB1F193DEF00522311 /* JudgeTableViewCell.swift */; };
 		E6DBCE3B1F193A500085E91F /* BattleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DBCE3A1F193A500085E91F /* BattleTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -67,14 +70,12 @@
 		9CE885A21F2684430019EE49 /* GuestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestTableViewCell.swift; sourceTree = "<group>"; };
 		9CE885A41F26EA520019EE49 /* InvitationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationViewController.swift; sourceTree = "<group>"; };
 		A20CD8BE1F2776BE00D8C4E1 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
-		A20F4DEF1F1515C00037EB24 /* LoginScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
 		A20F4DF01F1515C00037EB24 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		A20F4DF11F1515C00037EB24 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A20F4DF21F1515C00037EB24 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A20F4DF71F1516750037EB24 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A20F4DF81F1516750037EB24 /* pp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pp.jpg; sourceTree = "<group>"; };
 		A20F4DF91F1516750037EB24 /* battlelines.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = battlelines.ttf; sourceTree = "<group>"; };
-		A20F4DFD1F1517960037EB24 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A20F4DFF1F1517C30037EB24 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		A20F4E011F1517DB0037EB24 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A20F4E021F1517DB0037EB24 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +90,15 @@
 		AC94AD6A1B8E40BF002D9AD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AC94AD701B8E40BF002D9AD2 /* BattleFaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleFaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAD04149ED2DB307172CA51 /* Pods-SnapchatCameraTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapchatCameraTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapchatCameraTests/Pods-SnapchatCameraTests.release.xcconfig"; sourceTree = "<group>"; };
+		E64272361F3369C000005133 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		E64272381F3369D800005133 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Camera.storyboard; sourceTree = "<group>"; };
+		E642723B1F3369DC00005133 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Camera.strings"; sourceTree = "<group>"; };
+		E642723D1F3369DF00005133 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Camera.strings; sourceTree = "<group>"; };
+		E642723F1F336A7500005133 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E64272421F336A7800005133 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		E64272441F336C8700005133 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginScreen.storyboard; sourceTree = "<group>"; };
+		E64272471F336C8D00005133 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LoginScreen.strings"; sourceTree = "<group>"; };
+		E64272481F336D0A00005133 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E652A2AB1F193DEF00522311 /* JudgeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JudgeTableViewCell.swift; sourceTree = "<group>"; };
 		E6DBCE3A1F193A500085E91F /* BattleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleTableViewCell.swift; sourceTree = "<group>"; };
 		E999D9EA3C71D2FABB11C6A4 /* Pods-SnapchatCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapchatCamera.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapchatCamera/Pods-SnapchatCamera.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,7 +156,7 @@
 		9C3360BC1F19270F006EBDFF /* Camera */ = {
 			isa = PBXGroup;
 			children = (
-				9CE8859C1F25616A0019EE49 /* Camera.storyboard */,
+				E64272391F3369D800005133 /* Camera.storyboard */,
 				9CE885A21F2684430019EE49 /* GuestTableViewCell.swift */,
 				A20F4DFF1F1517C30037EB24 /* CameraViewController.swift */,
 				9C3360BA1F192705006EBDFF /* PhotoDestinationViewController.swift */,
@@ -169,7 +179,7 @@
 				A257120B1F0ECA6E0001376E /* JudgeViewController.swift */,
 				E652A2AB1F193DEF00522311 /* JudgeTableViewCell.swift */,
 				A257120D1F0ECA840001376E /* PublicBattleViewController.swift */,
-				A20F4DFD1F1517960037EB24 /* Main.storyboard */,
+				E64272401F336A7500005133 /* Main.storyboard */,
 				AC94AD691B8E40BF002D9AD2 /* LaunchScreen.xib */,
 			);
 			name = View;
@@ -189,7 +199,7 @@
 		A2F601001F10144F00C55E52 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				A20F4DEF1F1515C00037EB24 /* LoginScreen.storyboard */,
+				E64272451F336C8700005133 /* LoginScreen.storyboard */,
 				A20F4DF01F1515C00037EB24 /* LoginScreenViewController.swift */,
 				A20F4DF11F1515C00037EB24 /* RegisterViewController.swift */,
 				A20F4DF21F1515C00037EB24 /* LoginViewController.swift */,
@@ -236,6 +246,7 @@
 				A20F4DF91F1516750037EB24 /* battlelines.ttf */,
 				AC94AD5F1B8E40BF002D9AD2 /* Info.plist */,
 				9C5218F11F0C249A00D2D201 /* GoogleService-Info.plist */,
+				E64272481F336D0A00005133 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -320,6 +331,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = AC94AD521B8E40BF002D9AD2;
 			productRefGroup = AC94AD5C1B8E40BF002D9AD2 /* Products */;
@@ -337,13 +349,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A20F4DFE1F1517960037EB24 /* Main.storyboard in Resources */,
-				9CE8859D1F25616A0019EE49 /* Camera.storyboard in Resources */,
+				E642723E1F336A7500005133 /* Main.storyboard in Resources */,
+				E64272371F3369D800005133 /* Camera.storyboard in Resources */,
 				A20F4DFA1F1516750037EB24 /* Images.xcassets in Resources */,
 				9C5218F21F0C249A00D2D201 /* GoogleService-Info.plist in Resources */,
+				E64272491F336D0A00005133 /* Localizable.strings in Resources */,
 				A20F4DFB1F1516750037EB24 /* pp.jpg in Resources */,
 				AC94AD6B1B8E40BF002D9AD2 /* LaunchScreen.xib in Resources */,
-				A20F4DF31F1515C00037EB24 /* LoginScreen.storyboard in Resources */,
+				E64272431F336C8700005133 /* LoginScreen.storyboard in Resources */,
 				A20F4DFC1F1516750037EB24 /* battlelines.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,8 +517,37 @@
 			isa = PBXVariantGroup;
 			children = (
 				AC94AD6A1B8E40BF002D9AD2 /* Base */,
+				E64272361F3369C000005133 /* pt-BR */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		E64272391F3369D800005133 /* Camera.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E64272381F3369D800005133 /* Base */,
+				E642723B1F3369DC00005133 /* pt-BR */,
+				E642723D1F3369DF00005133 /* en */,
+			);
+			name = Camera.storyboard;
+			sourceTree = "<group>";
+		};
+		E64272401F336A7500005133 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E642723F1F336A7500005133 /* Base */,
+				E64272421F336A7800005133 /* pt-BR */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E64272451F336C8700005133 /* LoginScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E64272441F336C8700005133 /* Base */,
+				E64272471F336C8D00005133 /* pt-BR */,
+			);
+			name = LoginScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -515,6 +557,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -563,6 +606,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
