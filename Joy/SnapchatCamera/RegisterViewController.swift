@@ -92,7 +92,8 @@ class RegisterViewController: LoginViewController, UIImagePickerControllerDelega
         // Save the image to store it in Firebase
         if let photo = avaImg.image
         {
-            self.profilePhotoData = UIImagePNGRepresentation(photo)
+            // upload photo with compression
+            self.profilePhotoData = UIImageJPEGRepresentation(photo, 0)
         }
         
         self.dismiss(animated: true, completion: nil)

@@ -110,7 +110,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
             {
                 FirebaseLib.downloadImage(reference: photosRef[photoIndex], completionHandler:
                 {
-                        (imageError, gotPhoto) in
+                        (gotPhoto, imageError) in
                         
                         guard let photo = gotPhoto else
                         {

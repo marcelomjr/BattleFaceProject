@@ -58,7 +58,7 @@ class InvitationViewController: UIViewController
                 // Get the user profile photo
                 let guestPhotoPath = "userPhotos/" + guest + "/profilePhoto.jpg"
                 FirebaseLib.downloadImage(reference: guestPhotoPath, completionHandler:
-                { (error, profilePhoto) in
+                { (profilePhoto, error) in
                     guard let photo = profilePhoto else
                     {
                         print("Error in load guest profile photo")
@@ -83,7 +83,7 @@ class InvitationViewController: UIViewController
                 let judgePhotoPath = "userPhotos/" + judge + "/profilePhoto.jpg"
                 
                 FirebaseLib.downloadImage(reference: judgePhotoPath, completionHandler:
-                { (error, profilePhoto) in
+                { (profilePhoto, error) in
                     guard let photo = profilePhoto else
                     {
                         print("Error in load judge profile photo")
@@ -139,11 +139,11 @@ class InvitationViewController: UIViewController
             
             if key == "judge"
             {
-                findUserViewController!.findJudge = true
+                findUserViewController!.searchType = .Judge
             }
             else if key == "guest"
             {
-                findUserViewController!.findJudge = false
+                findUserViewController!.searchType = .Guest
             }
             else
             {

@@ -101,7 +101,7 @@ class FirebaseLib
         
         self.downloadImage(reference: path)
         {
-            (error, profilePhoto) in
+            (profilePhoto, error) in
             
             DispatchQueue.main.async
                 {
@@ -128,9 +128,11 @@ class FirebaseLib
     /* This function downloads a photo from the server
      * Returns a image or nil if there is an error
      */
-    static func downloadImage(reference: String, completionHandler: @escaping (Error?, UIImage?) -> Void)
+    static func downloadImage(reference: String, completionHandler: @escaping (UIImage?, Error?) -> Void)
     {
 
+        let maxSize: Int64 = 10 // In MB
+        
         // Get a reference to the storage service using the default Firebase App
         let storage = Storage.storage()
         
@@ -144,16 +146,16 @@ class FirebaseLib
         let imageRef = storageRef.child(reference)
     
         // Download in memory with a maximum allowed size of 20 MB
-        imageRef.getData(maxSize: 20 * 1024 * 1024)
+        imageRef.getData(maxSize: maxSize * 1024 * 1024)
         {
-            data, error in
+            (data, error) in
             DispatchQueue.main.async
             {
                 // Get the error if it exists
                 guard error == nil else
                 {
                     print("Error while get the photo, in downloadImage")
-                    completionHandler(error, nil)
+                    completionHandler(nil, error)
                     return
                 }
                 // Try create the image
@@ -163,7 +165,7 @@ class FirebaseLib
                     completionHandler(nil, nil)
                     return
                 }
-                completionHandler(nil, image)
+                completionHandler(image, error)
             }
         }
     }

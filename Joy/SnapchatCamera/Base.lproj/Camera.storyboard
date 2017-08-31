@@ -368,7 +368,7 @@
             </objects>
             <point key="canvasLocation" x="3221.5999999999999" y="2361.7691154422791"/>
         </scene>
-        <!--bla-->
+        <!--Title-->
         <scene sceneID="whA-3B-jjR">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="QBd-qy-PUh" customClass="FindUserViewController" customModule="BattleFace" customModuleProvider="target" sceneMemberID="viewController">
@@ -393,8 +393,9 @@
                             <constraint firstItem="ciz-vP-7wc" firstAttribute="top" secondItem="3Mj-lK-5Dr" secondAttribute="bottom" id="fju-Wi-iLE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="bla" id="f20-QY-VcK"/>
+                    <navigationItem key="navigationItem" title="Title" id="YBl-Ae-khX"/>
                     <connections>
+                        <outlet property="navigationTitle" destination="YBl-Ae-khX" id="rd6-bJ-dJM"/>
                         <outlet property="tableView" destination="3Mj-lK-5Dr" id="3Xh-uo-2Xd"/>
                         <outlet property="topConstraint" destination="6V5-bG-hGi" id="h3g-3L-V9S"/>
                     </connections>

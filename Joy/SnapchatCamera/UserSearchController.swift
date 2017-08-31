@@ -12,9 +12,16 @@ class UserSearchController
 {
     var nameAndUsernames: NSDictionary?
     var usernames: NSDictionary?
+    var finalUsernames = [String]()
+    var finalNames = [String]()
     
+    enum SearchType
+    {
+        case Judge, Guest
+    }
+
     // Pesquisa por nome ou username e retorna uma lista de elementos com: Nome, username e foto de perfil.
-    func findUser(key: String, completionHandler: @escaping ([UserSearchResult]?)->Void)
+    func findUser(key: String, battle: Battle, searchType: SearchType, completionHandler: @escaping ([UserSearchResult]?)->Void)
     {
         var results = [UserSearchResult]()
         var type = "usernamesTable"
@@ -51,29 +58,19 @@ class UserSearchController
                     return
                 }
                 
-                let finalUsernames = self.usernames!.allKeys as! [String]
-                let finalNames = self.usernames!.allValues as! [String]
+                self.finalUsernames = self.usernames!.allKeys as! [String]
+                self.finalNames = self.usernames!.allValues as! [String]
                 
-                for index in 0 ..< finalUsernames.count
+                self.removeInconsistencies(battle: battle, searchType: searchType)
+                
+                for index in 0 ..< self.finalUsernames.count
                 {
-                    let username = finalUsernames[index]
-                    
-//                    let photoPath = "userPhotos/" + username + "/profilePhoto.jpg"
-//                    FirebaseLib.downloadImage(reference: photoPath, completionHandler:
-//                    { (error, photo) in
-//                        if photo != nil
-//                        {
-//                            results[index].profilePhoto = photo
-//                        }
-//                    })
-                    
                     results.append(UserSearchResult())
-                    results[index].username = username
-                    results[index].name = finalNames[index]
+                    results[index].username = self.finalUsernames[index]
+                    results[index].name = self.finalNames[index]
                 }
                 
                 completionHandler(results)
-                
             })
         }
     }
@@ -114,4 +111,73 @@ class UserSearchController
             }
         }
     }
+    
+    func getProfilePhoto(username: String, completionHandler: @escaping (UIImage?, Error?) -> Void)
+    {
+        let photoPath = "userPhotos/" + username + "/profilePhoto.jpg"
+        
+        FirebaseLib.downloadImage(reference: photoPath)
+        { (photo, error) in
+            
+            DispatchQueue.main.async
+            {
+                completionHandler(photo, error)
+            }
+            
+        }
+    }
+    
+    func removeInconsistencies(battle: Battle, searchType: SearchType)
+    {
+        // Retira o próprio usuário da lista
+            let host = battle.hostUsername
+            
+        if let index = self.finalUsernames.index(of: host)
+        {
+            self.finalUsernames.remove(at: index)
+            self.finalNames.remove(at: index)
+        }
+        
+        // Se já foi selecionado um juiz nao permite que ele seja selecionado novamente como guest.
+        if (searchType == .Guest)
+        {
+            // Se nao existe judge registrado nao precisa verificar
+            guard battle.judgeUsername != nil else
+            {
+                return
+            }
+            
+            let judge = battle.judgeUsername!
+                
+            if let index = self.finalUsernames.index(of: judge)
+            {
+                self.finalUsernames.remove(at: index)
+                self.finalNames.remove(at: index)
+            }
+        }
+        // Somente pode ser judge o type
+        else
+        {
+            // Se nao existe guest registrado nao precisa verificar
+            guard battle.guestUsername != nil else
+            {
+                return
+            }
+            
+            let guest = battle.guestUsername!
+            
+            if let index = self.finalUsernames.index(of: guest)
+            {
+                self.finalUsernames.remove(at: index)
+                self.finalNames.remove(at: index)
+            }
+
+        }
+        
+    }
 }
+
+
+
+
+

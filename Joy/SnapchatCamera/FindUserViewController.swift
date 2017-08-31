@@ -20,16 +20,17 @@ class FindUserViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var navigationTitle: UINavigationItem!
+    
     var userSearchController = UserSearchController()
     var recentUsers =  [UserSearchResult]()
     
     // Array with the list of found users of search
     var foundUsers = [UserSearchResult]()
     
-    let usersDemo: [String] = [String]()
+    var searchType = UserSearchController.SearchType.Guest
     
-    var findJudge: Bool = false
-    
+       
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -50,14 +51,15 @@ class FindUserViewController: UIViewController, UITableViewDelegate, UITableView
         self.resultsController.tableView.delegate = self
         self.resultsController.tableView.dataSource = self
         
-        if (self.findJudge)
+        if (self.searchType == .Judge)
         {
-            self.navigationController?.title = "Search and Select a Judge"
+            self.navigationTitle.title = "Search and Select a Judge"
         }
         else
         {
-            self.navigationController?.title = "Search and Select a Guest"
+            self.navigationTitle.title = "Search and Select a Guest"
         }
+        
         // Create a nib with the cell
         let nib = UINib(nibName: "UserTableViewCell", bundle: nil)
         // Register the cell identifier to reuse after
@@ -66,7 +68,13 @@ class FindUserViewController: UIViewController, UITableViewDelegate, UITableView
     
     func findUserStartingBy(key: String)
     {
-        self.userSearchController.findUser(key: key)
+        guard battle != nil else
+        {
+            print("Error in battle")
+            return
+        }
+        
+        self.userSearchController.findUser(key: key, battle: self.battle!, searchType: self.searchType)
         { (foundUsers) in
             if foundUsers == nil
             {
@@ -102,8 +110,20 @@ class FindUserViewController: UIViewController, UITableViewDelegate, UITableView
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! UserTableViewCell
             cell.nameLabel.text = self.foundUsers[indexPath.row].name
-            cell.usernameLabel.text = self.foundUsers[indexPath.row].username
-            cell.profileImageView.image = self.foundUsers[indexPath.row].profilePhoto
+            
+            let username = self.foundUsers[indexPath.row].username!
+            
+            cell.usernameLabel.text = username
+            cell.profileImageView.image = UIImage(named: "pp.jpg")
+
+            self.userSearchController.getProfilePhoto(username: username, completionHandler:
+            { (photo, error) in
+                if (photo != nil)
+                {
+                    cell.profileImageView.image = photo
+                }
+            })
+           
             
             return cell
         }
@@ -131,6 +151,7 @@ class FindUserViewController: UIViewController, UITableViewDelegate, UITableView
         }
         if text.characters.count > 0
         {
+            self.foundUsers.removeAll()
             findUserStartingBy(key: text)
         }
     }
@@ -159,7 +180,7 @@ class FindUserViewController: UIViewController, UITableViewDelegate, UITableView
         {
             let user = self.foundUsers[indexPath.row].username!
             
-            if (self.findJudge)
+            if (self.searchType == .Judge)
             {
                 self.battle?.setJudge(username: user)
             }
