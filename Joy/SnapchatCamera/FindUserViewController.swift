@@ -14,11 +14,19 @@ class FindUserViewController: UIViewController, UITableViewDelegate, UITableView
     var resultsController = UITableViewController()
     var battle: Battle?
     
-    @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
+    
+    //@IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    
+    var userSearchController = UserSearchController()
+    var recentUsers =  [UserSearchResult]()
+    
+    // Array with the list of found users of search
+    var foundUsers = [UserSearchResult]()
+    
     let usersDemo: [String] = [String]()
-    var foundUsers: [String]?
     
     var findJudge: Bool = false
     
@@ -50,77 +58,69 @@ class FindUserViewController: UIViewController, UITableViewDelegate, UITableView
         {
             self.navigationController?.title = "Search and Select a Guest"
         }
+        // Create a nib with the cell
+        let nib = UINib(nibName: "UserTableViewCell", bundle: nil)
+        // Register the cell identifier to reuse after
+        self.resultsController.tableView.register(nib, forCellReuseIdentifier: "userCell")
     }
     
     func findUserStartingBy(key: String)
     {
-        FirebaseLib.searchUser(path: "publicProfiles", key: key)
-        { (error, usernames) in
-            guard let users = usernames else
+        self.userSearchController.findUser(key: key)
+        { (foundUsers) in
+            if foundUsers == nil
             {
-                print("Error at search users")
-                self.foundUsers = nil
-                self.resultsController.tableView.reloadData()
-                return
+                print("trata nao achar usuario")
+            }
+            else
+            {
+                self.foundUsers = foundUsers!
+                //            // reload the table
+                            self.resultsController.tableView.reloadData()// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>VEJA SE FAZ SENTIDO
             }
             
-            self.foundUsers = (users.allKeys as? [String])?.sorted()
-            
-            // reload the table
-            self.resultsController.tableView.reloadData()
         }
-
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-
+    // Define the number of rows in the table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         if tableView == self.resultsController.tableView
         {
-            guard let usersNumber = self.foundUsers?.count else
-            {
-                print("Error at tableview numberofRows...")
-                return 0
-            }
-            return usersNumber
+            return self.foundUsers.count
         }
         else
         {
-            return usersDemo.count
+            return recentUsers.count
         }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = UITableViewCell()
-
+        // TableView carregada por conta da pesquisa feita
         if tableView == self.resultsController.tableView
         {
-            guard let users = self.foundUsers else
-            {
-                print("Error at tableview cellForRowAt...")
-                cell.textLabel?.text = "Error"
-                
-                return cell
-                
-            }
-            cell.textLabel?.text = users[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! UserTableViewCell
+            cell.nameLabel.text = self.foundUsers[indexPath.row].name
+            cell.usernameLabel.text = self.foundUsers[indexPath.row].username
+            cell.profileImageView.image = self.foundUsers[indexPath.row].profilePhoto
+            
+            return cell
         }
         else
         {
-            cell.textLabel?.text = usersDemo[indexPath.row]
+            let cell = UITableViewCell()
+            //cell.textLabel?.text =  self.foundUsers?[indexPath.row]
+            return cell
+           
         }
-        
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "guestCell", for: indexPath)
-        
-        
-        return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 70
+    }
+
     
     public func updateSearchResults(for searchController: UISearchController)
     {
@@ -141,7 +141,7 @@ class FindUserViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
-        self.tableViewTopConstraint.constant = -self.topLayoutGuide.length
+        self.topConstraint.constant = -self.topLayoutGuide.length
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar)
@@ -149,7 +149,7 @@ class FindUserViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         
-        self.tableViewTopConstraint.constant = +self.topLayoutGuide.length
+        self.topConstraint.constant = +self.topLayoutGuide.length
     }
 
     
@@ -157,11 +157,7 @@ class FindUserViewController: UIViewController, UITableViewDelegate, UITableView
     {
         if tableView == self.resultsController.tableView
         {
-            guard let user = self.foundUsers?[indexPath.row] else
-            {
-                print("username not found at didSelectRowAt")
-                return
-            }
+            let user = self.foundUsers[indexPath.row].username!
             
             if (self.findJudge)
             {

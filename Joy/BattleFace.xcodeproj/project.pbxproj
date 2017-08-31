@@ -14,10 +14,12 @@
 		9C3360BB1F192705006EBDFF /* PhotoDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3360BA1F192705006EBDFF /* PhotoDestinationViewController.swift */; };
 		9C375B871F2E80940012B83E /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C375B861F2E80940012B83E /* Battle.swift */; };
 		9C5218F21F0C249A00D2D201 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C5218F11F0C249A00D2D201 /* GoogleService-Info.plist */; };
+		9C77FD311F57926F001A2C45 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C77FD2F1F57926F001A2C45 /* UserTableViewCell.swift */; };
+		9C77FD321F57926F001A2C45 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C77FD301F57926F001A2C45 /* UserTableViewCell.xib */; };
+		9C77FD341F57B283001A2C45 /* UserSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C77FD331F57B283001A2C45 /* UserSearchController.swift */; };
+		9C77FD361F57B796001A2C45 /* UserSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C77FD351F57B796001A2C45 /* UserSearchResult.swift */; };
 		9C7994431F28E2CD006B74FE /* FindUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7994421F28E2CD006B74FE /* FindUserViewController.swift */; };
 		9CA17E711F1F7E3900DC8FF3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA17E701F1F7E3900DC8FF3 /* ProfileViewController.swift */; };
-
-		9CE8859D1F25616A0019EE49 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE8859C1F25616A0019EE49 /* Camera.storyboard */; };
 		9CE885A31F2684430019EE49 /* GuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE885A21F2684430019EE49 /* GuestTableViewCell.swift */; };
 		9CE885A51F26EA520019EE49 /* InvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE885A41F26EA520019EE49 /* InvitationViewController.swift */; };
 		A20CD8BF1F2776BE00D8C4E1 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CD8BE1F2776BE00D8C4E1 /* ImageViewController.swift */; };
@@ -64,9 +66,12 @@
 		9C3360BA1F192705006EBDFF /* PhotoDestinationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDestinationViewController.swift; sourceTree = "<group>"; };
 		9C375B861F2E80940012B83E /* Battle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
 		9C5218F11F0C249A00D2D201 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9C77FD2F1F57926F001A2C45 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		9C77FD301F57926F001A2C45 /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		9C77FD331F57B283001A2C45 /* UserSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchController.swift; sourceTree = "<group>"; };
+		9C77FD351F57B796001A2C45 /* UserSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchResult.swift; sourceTree = "<group>"; };
 		9C7994421F28E2CD006B74FE /* FindUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindUserViewController.swift; sourceTree = "<group>"; };
 		9CA17E701F1F7E3900DC8FF3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		9CE8859C1F25616A0019EE49 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		9CE885A21F2684430019EE49 /* GuestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestTableViewCell.swift; sourceTree = "<group>"; };
 		9CE885A41F26EA520019EE49 /* InvitationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationViewController.swift; sourceTree = "<group>"; };
 		A20CD8BE1F2776BE00D8C4E1 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +143,7 @@
 		9C0371B51F15528600E57048 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9C77FD331F57B283001A2C45 /* UserSearchController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -149,6 +155,7 @@
 				9C0371B61F15736900E57048 /* UserData.swift */,
 				9C0371B81F164A2E00E57048 /* Log.swift */,
 				9C375B861F2E80940012B83E /* Battle.swift */,
+				9C77FD351F57B796001A2C45 /* UserSearchResult.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -162,6 +169,8 @@
 				9C3360BA1F192705006EBDFF /* PhotoDestinationViewController.swift */,
 				9CE885A41F26EA520019EE49 /* InvitationViewController.swift */,
 				9C7994421F28E2CD006B74FE /* FindUserViewController.swift */,
+				9C77FD2F1F57926F001A2C45 /* UserTableViewCell.swift */,
+				9C77FD301F57926F001A2C45 /* UserTableViewCell.xib */,
 			);
 			name = Camera;
 			sourceTree = "<group>";
@@ -353,6 +362,7 @@
 				E64272371F3369D800005133 /* Camera.storyboard in Resources */,
 				A20F4DFA1F1516750037EB24 /* Images.xcassets in Resources */,
 				9C5218F21F0C249A00D2D201 /* GoogleService-Info.plist in Resources */,
+				9C77FD321F57926F001A2C45 /* UserTableViewCell.xib in Resources */,
 				E64272491F336D0A00005133 /* Localizable.strings in Resources */,
 				A20F4DFB1F1516750037EB24 /* pp.jpg in Resources */,
 				AC94AD6B1B8E40BF002D9AD2 /* LaunchScreen.xib in Resources */,
@@ -471,7 +481,10 @@
 				A20F4E001F1517C30037EB24 /* CameraViewController.swift in Sources */,
 				9C7994431F28E2CD006B74FE /* FindUserViewController.swift in Sources */,
 				9C0371B91F164A2E00E57048 /* Log.swift in Sources */,
+				9C77FD341F57B283001A2C45 /* UserSearchController.swift in Sources */,
 				A20F4E041F1517DB0037EB24 /* NavigationViewController.swift in Sources */,
+				9C77FD311F57926F001A2C45 /* UserTableViewCell.swift in Sources */,
+				9C77FD361F57B796001A2C45 /* UserSearchResult.swift in Sources */,
 				E6DBCE3B1F193A500085E91F /* BattleTableViewCell.swift in Sources */,
 				E652A2AC1F193DEF00522311 /* JudgeTableViewCell.swift in Sources */,
 				A20F4DF51F1515C00037EB24 /* RegisterViewController.swift in Sources */,

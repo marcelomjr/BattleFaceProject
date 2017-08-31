@@ -13,19 +13,18 @@ class PhotoDestinationViewController: UIViewController
     
     @IBOutlet weak var takenPhotoView: UIImageView!
     var takenPhoto: UIImage?
+    var photoData: Data?
 
     @IBAction func postButton(_ sender: Any)
     {
-
-        uploadPhoto()
         
+        uploadPhoto()
+       
         performSegue(withIdentifier: "PhotoDestinationToTabBar", sender: nil)
     }
 
     @IBAction func buildBattle(_ sender: Any)
     {
-       
-        
         guard let photoData = UIImagePNGRepresentation(self.takenPhotoView.image!) else
         {
             print("Error in convertion")
@@ -46,6 +45,7 @@ class PhotoDestinationViewController: UIViewController
         }
         
         self.takenPhotoView.image = self.takenPhoto
+        self.photoData = UIImageJPEGRepresentation(self.takenPhoto!, 0)
         
     }
     override func viewWillAppear(_ animated: Bool)
@@ -54,17 +54,18 @@ class PhotoDestinationViewController: UIViewController
         
         self.navigationController?.navigationBar.isHidden = false
     }
+
     
     func uploadPhoto()
     {
-        guard let photoData = UIImagePNGRepresentation(self.takenPhotoView.image!) else
+        guard let data = self.photoData else
         {
             print("Error in convertion")
             return
         }
         
         
-        FirebaseLib.addPhoto(photoData: photoData)
+        FirebaseLib.addPhoto(photoData: data)
         { (photoPath, error) in
             if photoPath != nil
             {

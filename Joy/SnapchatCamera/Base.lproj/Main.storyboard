@@ -116,7 +116,7 @@
                         <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4Gb-2M-WL4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Gb-2M-WL4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -137,7 +137,7 @@
                         <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MCX-MY-goh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MCX-MY-goh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -822,7 +822,7 @@
                 <navigationController storyboardIdentifier="ProfileID" automaticallyAdjustsScrollViewInsets="NO" id="cpG-6K-PHw" customClass="NavigationViewController" customModule="BattleFace" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="profile" selectedImage="profileSelected" id="dEl-81-6tn"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="jza-ED-xRA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jza-ED-xRA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -841,7 +841,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cZR-5S-t0i" customClass="NavigationViewController" customModule="BattleFace" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Discover" image="world" selectedImage="worldSelected" id="xKy-fX-asQ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xbn-M3-Xra">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xbn-M3-Xra">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

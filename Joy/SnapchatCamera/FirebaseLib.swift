@@ -12,6 +12,7 @@ import FirebaseStorage
 import FirebaseDatabase
 import FirebaseAuth
 
+
 class FirebaseLib
 {
     static private var username: String?
@@ -74,7 +75,6 @@ class FirebaseLib
         // Create a reference as the path of image tha will be saved
         let imageRef = storageRef.child(reference)
         
-        print("vai subir")
         // Upload the file to the path
         imageRef.putData(photoData, metadata: nil)
         { (metadata, error) in
@@ -317,17 +317,19 @@ class FirebaseLib
                 
                 
                 let user =  ref.child("usersData").child(username)
-                if user != nil///////////MELHORARAR ISSSOO
-                {
-                    user.child("account").setValue(account)
-                    user.child("name").setValue(name)
-                    user.child("age").setValue(age)
-                    user.child("photosNumber").setValue("0")
-                }
+                user.child("account").setValue(account)
+                user.child("name").setValue(name)
+                user.child("age").setValue(age)
+                user.child("photosNumber").setValue("0")
                 
-                // Create the public profile
-               ref.child("publicProfiles").child(username).setValue(name)
                 
+                // Table of usernames
+                let usernamesTable = ref.child("usernamesTable")
+                usernamesTable.child(username).setValue(name)
+                
+                // Table of names
+                let namesTable = ref.child("namesTable")
+                namesTable.child(name).setValue(username)
                 
                 // Set the userID in this device
                 Log.deviceLogIn(userID: userID)
@@ -416,7 +418,7 @@ class FirebaseLib
         return self.username
     }
     
-    static func buildBattle(challenged: String, judge: String, myPhotoPath: String,photoCaption: String)
+    static func buildBattle(challenged: String, judge: String, myPhotoPath: String, photoCaption: String)
     {
         var ref: DatabaseReference!
         
@@ -429,10 +431,12 @@ class FirebaseLib
         }
         
         let challenge = ref.child("challenges").childByAutoId()
-        challenge.child("challenger").setValue(user)
-        challenge.child("challenged").setValue(challenged)
+        challenge.child("host").setValue(user)
+        challenge.child("guest").setValue(challenged)
         challenge.child("judge").setValue(judge)
-        challenge.child("challengerPhotoPath").setValue(myPhotoPath)
+        challenge.child("hostPhotoPath").setValue(myPhotoPath)
+        
+        
     }
     
     static func findUser(username: String) -> String
@@ -446,87 +450,25 @@ class FirebaseLib
         return userPath
     }
     
-    static func demo()
-    {
-        guard let user = FirebaseLib.getUsername() else
-        {
-            print("Username not found!")
-            return
-        }
     
-        var ref: DatabaseReference!
-        ref = Database.database().reference()
-        
-        // Adicionando um único filho
-//        ref.child("Teste/escola/alunos/nome").setValue("Pedro")
-//        ref.child("Teste/escola/alunos/nome").setValue("Paulo")
-//        
-//        ref.child("Teste").child("escola").child("aluno").child("nome").setValue("Joao")
-        
-        
-        /* Adicionar varios filhos */
-        let alunos = ref.child("agoravai")
-        alunos.child("aluno1").setValue("Marcelo")
-        alunos.child("aluno2").setValue("Marcela")
-        
-
-//        /* Upload de arquivo */
-//        let photo = UIImage(named: "Face3")
-//        let photoData = UIImagePNGRepresentation(photo!)
-//        
-//        self.storePhoto(reference: "demo/lastPhoto/photo", photoData: photoData!)
-    }
-    
-    
-    
-    static func getDemoUser(completionHandler: @escaping (String?) -> Void)
-    {
-        var ref: DatabaseReference!
-        ref = Database.database().reference()
-        
-        if let user = username
-        {
-            ref.child("demo").child("lastPhoto").child("user").observeSingleEvent(of: .value, with:
-                { (snapshot) in
-                    let value = snapshot.value as? String
-                    
-                    DispatchQueue.main.async
-                        {
-                            let user = value
-                            completionHandler(user)
-                    }
-            })
-        }
-    }
-    
-    static func searchUser(path: String, key: String, completionHandler: @escaping (Error?, NSDictionary?)->Void)
+    static func searchUser(typeOfSearch: String, key: String, completionHandler: @escaping (NSDictionary?)->Void)
     {
         let searchRange: UInt = 100
         var ref: DatabaseReference!
         ref = Database.database().reference()
         
-        let userQuery = ref.child(path)
+        let userQuery = ref.child(typeOfSearch)
         userQuery.queryOrderedByKey().queryLimited(toFirst: searchRange).queryStarting(atValue: key).observeSingleEvent(of: .value, with:
         { (snapshot) in
 
-            guard let users = snapshot.value as? NSDictionary else
+            if let users = snapshot.value as? NSDictionary
             {
-                print("Error at searchUser")///>>>>>> Aqui nao precisa de dispatchQueue...
-                DispatchQueue.main.async
-                {
-                    completionHandler(nil, nil)
-                }
-                return
+                completionHandler(users)
             }
-            
-            DispatchQueue.main.async // >>>>> Pq precisa disso já que o snapshot só é gerado quando já fez o download.
+            else
             {
-                completionHandler(nil, users)
+                completionHandler(nil)
             }
         })
-        
-        
-
-        
     }
 }
