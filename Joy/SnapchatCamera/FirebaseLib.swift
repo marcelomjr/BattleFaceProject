@@ -453,14 +453,16 @@ class FirebaseLib
     }
     
     
-    static func searchUser(typeOfSearch: String, key: String, completionHandler: @escaping (NSDictionary?)->Void)
+    static func searchUser(typeOfSearch: String, key: String, endValueKey: String, completionHandler: @escaping (NSDictionary?)->Void)
     {
         let searchRange: UInt = 100
+
         var ref: DatabaseReference!
         ref = Database.database().reference()
         
+        
         let userQuery = ref.child(typeOfSearch)
-        userQuery.queryOrderedByKey().queryLimited(toFirst: searchRange).queryStarting(atValue: key).observeSingleEvent(of: .value, with:
+        userQuery.queryOrderedByKey().queryLimited(toFirst: searchRange).queryStarting(atValue: key).queryEnding(atValue: endValueKey).observeSingleEvent(of: .value, with:
         { (snapshot) in
 
             if let users = snapshot.value as? NSDictionary

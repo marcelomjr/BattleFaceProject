@@ -115,13 +115,19 @@ class FindUserViewController: UIViewController, UITableViewDelegate, UITableView
             
             cell.usernameLabel.text = username
             cell.profileImageView.image = UIImage(named: "pp.jpg")
-
+            
+            cell.activityIndicator.startAnimating()
             self.userSearchController.getProfilePhoto(username: username, completionHandler:
             { (photo, error) in
                 if (photo != nil)
                 {
                     cell.profileImageView.image = photo
                 }
+                else
+                {
+                    print(error?.localizedDescription)
+                }
+                cell.activityIndicator.stopAnimating()
             })
            
             
@@ -152,6 +158,7 @@ class FindUserViewController: UIViewController, UITableViewDelegate, UITableView
         if text.characters.count > 0
         {
             self.foundUsers.removeAll()
+            self.resultsController.tableView.reloadData()
             findUserStartingBy(key: text)
         }
     }

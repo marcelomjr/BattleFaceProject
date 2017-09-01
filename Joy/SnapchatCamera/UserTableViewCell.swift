@@ -16,4 +16,5 @@ class UserTableViewCell: UITableViewCell
     @IBOutlet weak var usernameLabel: UILabel!
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 }

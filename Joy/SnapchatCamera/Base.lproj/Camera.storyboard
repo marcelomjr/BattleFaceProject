@@ -242,16 +242,16 @@
                                     <action selector="buildBattleButton:" destination="szc-bS-Fhb" eventType="touchUpInside" id="YL0-WZ-GtW"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CrH-YA-nrt">
-                                <rect key="frame" x="138" y="84" width="100" height="133.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="CrH-YA-nrt">
+                                <rect key="frame" x="88" y="84" width="200" height="200"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="CrH-YA-nrt" secondAttribute="height" multiplier="3:4" id="LoA-xb-n4y"/>
-                                    <constraint firstAttribute="width" constant="100" id="REG-6j-0wk"/>
+                                    <constraint firstAttribute="width" secondItem="CrH-YA-nrt" secondAttribute="height" multiplier="1:1" id="LoA-xb-n4y"/>
+                                    <constraint firstAttribute="width" constant="200" id="REG-6j-0wk"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tre-ho-Ipu" userLabel="SearchChallenged">
-                                <rect key="frame" x="136" y="319.5" width="223" height="40"/>
+                                <rect key="frame" x="136" y="369.5" width="223" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Gqn-zk-pTE"/>
                                 </constraints>
@@ -262,41 +262,41 @@
                                     <action selector="searchChallengedButton:" destination="szc-bS-Fhb" eventType="touchUpInside" id="cCe-pN-mRr"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u7O-Rd-sjW">
-                                <rect key="frame" x="16" y="272.5" width="100" height="133"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u7O-Rd-sjW">
+                                <rect key="frame" x="16" y="339" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="05L-K0-Qr2"/>
-                                    <constraint firstAttribute="width" secondItem="u7O-Rd-sjW" secondAttribute="height" multiplier="3:4" id="EpJ-8j-jxq"/>
+                                    <constraint firstAttribute="width" secondItem="u7O-Rd-sjW" secondAttribute="height" multiplier="1:1" id="EpJ-8j-jxq"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rEZ-0O-Siz">
-                                <rect key="frame" x="16" y="451.5" width="100" height="133"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rEZ-0O-Siz">
+                                <rect key="frame" x="16" y="485" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="rEZ-0O-Siz" secondAttribute="height" multiplier="3:4" id="GX5-Es-Znl"/>
+                                    <constraint firstAttribute="width" secondItem="rEZ-0O-Siz" secondAttribute="height" multiplier="1:1" id="GX5-Es-Znl"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a label" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cgn-DU-B8Y">
-                                <rect key="frame" x="16" y="222.5" width="343" height="30"/>
+                                <rect key="frame" x="16" y="289" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqf-8D-qAf">
-                                <rect key="frame" x="16" y="410.5" width="100" height="21"/>
+                                <rect key="frame" x="16" y="444" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddI-iJ-0d6">
-                                <rect key="frame" x="16" y="589.5" width="100" height="21"/>
+                                <rect key="frame" x="16" y="590" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9A-Pg-7zQ">
-                                <rect key="frame" x="136" y="498" width="223" height="40"/>
+                                <rect key="frame" x="136" y="515" width="223" height="40"/>
                                 <state key="normal" title="Search the Judge" backgroundImage="buttonBG">
                                     <color key="titleColor" red="0.9516311288" green="0.050255946820000001" blue="0.48363977670000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -305,10 +305,10 @@
                                 </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="VHD-Mq-gey">
-                                <rect key="frame" x="56" y="329" width="20" height="20"/>
+                                <rect key="frame" x="56" y="379" width="20" height="20"/>
                             </activityIndicatorView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xRp-Hl-iEd">
-                                <rect key="frame" x="56" y="508" width="20" height="20"/>
+                                <rect key="frame" x="56" y="525" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

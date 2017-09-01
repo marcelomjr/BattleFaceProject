@@ -24,8 +24,10 @@ class UserSearchController
     func findUser(key: String, battle: Battle, searchType: SearchType, completionHandler: @escaping ([UserSearchResult]?)->Void)
     {
         var results = [UserSearchResult]()
+        let endValueKey = self.getEndValueKey(key: key)
+        
         var type = "usernamesTable"
-        FirebaseLib.searchUser(typeOfSearch: type , key: key)
+        FirebaseLib.searchUser(typeOfSearch: type , key: key, endValueKey: endValueKey)
         { (foundUsernames) in
 
             if foundUsernames == nil
@@ -38,7 +40,7 @@ class UserSearchController
             }
             
             type = "namesTable"
-            FirebaseLib.searchUser(typeOfSearch: type, key: key, completionHandler:
+            FirebaseLib.searchUser(typeOfSearch: type, key: key, endValueKey: endValueKey, completionHandler:
             { (foundNames) in
                 
                 if foundNames == nil
@@ -91,10 +93,8 @@ class UserSearchController
         // Caso nao tenha sido encontrado usernames mas tenha sido encontrados nomes
         if self.usernames == nil
         {
-            for index in 0 ..< names.count
-            {
-                self.usernames?.setValue(foundUsernames[index], forKey: names[index])
-            }
+            // Copia todos os resultados para o dicionário usernames.
+            self.usernames = NSDictionary(objects: names, forKeys: foundUsernames as [NSCopying])
             return
         }
         let rightUsernames = self.usernames?.allKeys as! [String]
@@ -107,7 +107,7 @@ class UserSearchController
             // Se o usuario nao esta na lista coloque ele nela
             if !rightUsernames.contains(user)
             {
-                self.usernames?.setValue(foundUsernames[index], forKey: names[index])
+                self.usernames?.setValue(names[index], forKey: foundUsernames[index])
             }
         }
     }
@@ -174,6 +174,19 @@ class UserSearchController
 
         }
         
+    }
+    
+    func getEndValueKey(key: String) -> String
+    {
+        let lastChar = key.unicodeScalars.last!
+        let nextChar = String(Character(UnicodeScalar(lastChar.value + 1)!))
+        var endValue = key
+        
+        endValue.append(nextChar)
+        let index = endValue.endIndex
+        
+        endValue.remove(at: endValue.index(index, offsetBy: -2))
+        return endValue
     }
 }
 

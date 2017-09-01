@@ -40,6 +40,9 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DSB-vu-iQW">
+                        <rect key="frame" x="23" y="25" width="20" height="20"/>
+                    </activityIndicatorView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="dz6-Rt-qdQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="0bv-aG-s8m"/>
@@ -49,10 +52,13 @@
                     <constraint firstItem="dz6-Rt-qdQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZgE-4T-aRv"/>
                     <constraint firstItem="Gpl-DY-yeI" firstAttribute="bottom" secondItem="dz6-Rt-qdQ" secondAttribute="bottom" id="cfq-r8-l7h"/>
                     <constraint firstItem="Gpl-DY-yeI" firstAttribute="trailing" secondItem="d4k-5U-FcP" secondAttribute="trailing" id="gCC-g5-fce"/>
+                    <constraint firstItem="DSB-vu-iQW" firstAttribute="centerY" secondItem="dz6-Rt-qdQ" secondAttribute="centerY" id="jNy-rm-Mqp"/>
                     <constraint firstItem="d4k-5U-FcP" firstAttribute="top" secondItem="dz6-Rt-qdQ" secondAttribute="top" id="pve-d2-yNT"/>
+                    <constraint firstItem="DSB-vu-iQW" firstAttribute="centerX" secondItem="dz6-Rt-qdQ" secondAttribute="centerX" id="rSh-A1-2aO"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="activityIndicator" destination="DSB-vu-iQW" id="atF-WO-y8h"/>
                 <outlet property="nameLabel" destination="Gpl-DY-yeI" id="LUi-vG-pZa"/>
                 <outlet property="profileImageView" destination="dz6-Rt-qdQ" id="KzQ-6P-p0V"/>
                 <outlet property="usernameLabel" destination="d4k-5U-FcP" id="cke-Uc-VEB"/>
