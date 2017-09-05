@@ -19,16 +19,6 @@ class TabBarViewController: UITabBarController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        if selectedIndex == 0 {
-            self.tabBar.backgroundImage = UIImage(named: "TabBar0.png")
-            print("estou no index 0")
-        
-        }
-                if selectedIndex == 1 {self.tabBar.backgroundImage = UIImage(named: "TabBar1.png")}
-                if selectedIndex == 2 {self.tabBar.backgroundImage = UIImage(named: "TabBar2.png")}
-                if selectedIndex == 3 {self.tabBar.backgroundImage = UIImage(named: "TabBar3.png")}
-                if selectedIndex == 4 {self.tabBar.backgroundImage = UIImage(named: "TabBar4.png")}
-        
     }
     
     // default func
@@ -39,16 +29,6 @@ class TabBarViewController: UITabBarController {
         self.tabBar.tintColor = UIColor(red: 243.0/255.0, green: 13.0/255.0, blue: 123.0/255.0, alpha: 1.0)
         
         self.tabBar.unselectedItemTintColor = UIColor.black
-        
-//        self.tabBar.backgroundImage = UIImage(named: "TabBar0.png")
-        
-//        if selectedIndex == 0 {self.tabBar.backgroundImage = UIImage(named: "TabBar0.png")}
-//        if selectedIndex == 1 {self.tabBar.backgroundImage = UIImage(named: "TabBar1.png")}
-//        if selectedIndex == 2 {self.tabBar.backgroundImage = UIImage(named: "TabBar2.png")}
-//        if selectedIndex == 3 {self.tabBar.backgroundImage = UIImage(named: "TabBar3.png")}
-//        if selectedIndex == 4 {self.tabBar.backgroundImage = UIImage(named: "TabBar4.png")}
-    
-        //self.tabBar.backgroundImage = UIImage(named: "TabBar.png")
         
         // color of background
         self.tabBar.barTintColor = UIColor.white
@@ -91,11 +71,6 @@ class TabBarViewController: UITabBarController {
         dot.isHidden = false
     }
     
-    
-    // clicked upload button (go to upload)
-    func upload(_ sender : UIButton) {
-        self.selectedIndex = 2
-    }
 
     /*
     // MARK: - Navigation

@@ -37,6 +37,10 @@
 		A25712081F0ECA3E0001376E /* BattlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25712071F0ECA3E0001376E /* BattlesViewController.swift */; };
 		A257120C1F0ECA6E0001376E /* JudgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A257120B1F0ECA6E0001376E /* JudgeViewController.swift */; };
 		A257120E1F0ECA840001376E /* PublicBattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A257120D1F0ECA840001376E /* PublicBattleViewController.swift */; };
+		A28EFC351F5F2C7200332952 /* IndexedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28EFC341F5F2C7200332952 /* IndexedCollectionViewCell.xib */; };
+		A291D8261F5F254B00C8DB36 /* TableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291D8251F5F254B00C8DB36 /* TableCollectionViewController.swift */; };
+		A291D8291F5F265A00C8DB36 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291D8281F5F265A00C8DB36 /* CollectionTableViewCell.swift */; };
+		A291D82B1F5F279200C8DB36 /* IndexedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291D82A1F5F279200C8DB36 /* IndexedCollectionViewCell.swift */; };
 		AC94AD611B8E40BF002D9AD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94AD601B8E40BF002D9AD2 /* AppDelegate.swift */; };
 		AC94AD6B1B8E40BF002D9AD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC94AD691B8E40BF002D9AD2 /* LaunchScreen.xib */; };
 		E64272371F3369D800005133 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64272391F3369D800005133 /* Camera.storyboard */; };
@@ -89,6 +93,10 @@
 		A25712071F0ECA3E0001376E /* BattlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattlesViewController.swift; sourceTree = "<group>"; };
 		A257120B1F0ECA6E0001376E /* JudgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JudgeViewController.swift; sourceTree = "<group>"; };
 		A257120D1F0ECA840001376E /* PublicBattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicBattleViewController.swift; sourceTree = "<group>"; };
+		A28EFC341F5F2C7200332952 /* IndexedCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexedCollectionViewCell.xib; sourceTree = "<group>"; };
+		A291D8251F5F254B00C8DB36 /* TableCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCollectionViewController.swift; sourceTree = "<group>"; };
+		A291D8281F5F265A00C8DB36 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		A291D82A1F5F279200C8DB36 /* IndexedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexedCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC94AD5B1B8E40BF002D9AD2 /* BattleFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BattleFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC94AD5F1B8E40BF002D9AD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC94AD601B8E40BF002D9AD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +186,7 @@
 		9C5523FB1F057F4D00EB312C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A291D8271F5F263800C8DB36 /* Battles */,
 				9CA17E6D1F1F756300DC8FF3 /* Profile */,
 				9C3360BC1F19270F006EBDFF /* Camera */,
 				A2F601001F10144F00C55E52 /* Login */,
@@ -203,6 +212,17 @@
 				A20CD8BE1F2776BE00D8C4E1 /* ImageViewController.swift */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		A291D8271F5F263800C8DB36 /* Battles */ = {
+			isa = PBXGroup;
+			children = (
+				A291D8251F5F254B00C8DB36 /* TableCollectionViewController.swift */,
+				A291D8281F5F265A00C8DB36 /* CollectionTableViewCell.swift */,
+				A291D82A1F5F279200C8DB36 /* IndexedCollectionViewCell.swift */,
+				A28EFC341F5F2C7200332952 /* IndexedCollectionViewCell.xib */,
+			);
+			name = Battles;
 			sourceTree = "<group>";
 		};
 		A2F601001F10144F00C55E52 /* Login */ = {
@@ -323,7 +343,7 @@
 				TargetAttributes = {
 					AC94AD5A1B8E40BF002D9AD2 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = J5KQYDNX5E;
+						DevelopmentTeam = KYTAYKS6H2;
 						LastSwiftMigration = 0830;
 					};
 					AC94AD6F1B8E40BF002D9AD2 = {
@@ -367,6 +387,7 @@
 				A20F4DFB1F1516750037EB24 /* pp.jpg in Resources */,
 				AC94AD6B1B8E40BF002D9AD2 /* LaunchScreen.xib in Resources */,
 				E64272431F336C8700005133 /* LoginScreen.storyboard in Resources */,
+				A28EFC351F5F2C7200332952 /* IndexedCollectionViewCell.xib in Resources */,
 				A20F4DFC1F1516750037EB24 /* battlelines.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,11 +503,13 @@
 				9C7994431F28E2CD006B74FE /* FindUserViewController.swift in Sources */,
 				9C0371B91F164A2E00E57048 /* Log.swift in Sources */,
 				9C77FD341F57B283001A2C45 /* UserSearchController.swift in Sources */,
+				A291D82B1F5F279200C8DB36 /* IndexedCollectionViewCell.swift in Sources */,
 				A20F4E041F1517DB0037EB24 /* NavigationViewController.swift in Sources */,
 				9C77FD311F57926F001A2C45 /* UserTableViewCell.swift in Sources */,
 				9C77FD361F57B796001A2C45 /* UserSearchResult.swift in Sources */,
 				E6DBCE3B1F193A500085E91F /* BattleTableViewCell.swift in Sources */,
 				E652A2AC1F193DEF00522311 /* JudgeTableViewCell.swift in Sources */,
+				A291D8261F5F254B00C8DB36 /* TableCollectionViewController.swift in Sources */,
 				A20F4DF51F1515C00037EB24 /* RegisterViewController.swift in Sources */,
 				A20CD8BF1F2776BE00D8C4E1 /* ImageViewController.swift in Sources */,
 				9C3360BB1F192705006EBDFF /* PhotoDestinationViewController.swift in Sources */,
@@ -503,6 +526,7 @@
 				A22030BC1F154A080071E708 /* ImageCollectionViewCell.swift in Sources */,
 				9CE885A31F2684430019EE49 /* GuestTableViewCell.swift in Sources */,
 				9C0371B71F15736900E57048 /* UserData.swift in Sources */,
+				A291D8291F5F265A00C8DB36 /* CollectionTableViewCell.swift in Sources */,
 				AC94AD611B8E40BF002D9AD2 /* AppDelegate.swift in Sources */,
 				A20F4DF61F1515C00037EB24 /* LoginViewController.swift in Sources */,
 			);
@@ -662,7 +686,7 @@
 			baseConfigurationReference = E999D9EA3C71D2FABB11C6A4 /* Pods-SnapchatCamera.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J5KQYDNX5E;
+				DEVELOPMENT_TEAM = KYTAYKS6H2;
 				INFOPLIST_FILE = SnapchatCamera/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -677,7 +701,7 @@
 			baseConfigurationReference = 4E3AC7818B4C18573DD65E8A /* Pods-SnapchatCamera.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J5KQYDNX5E;
+				DEVELOPMENT_TEAM = KYTAYKS6H2;
 				INFOPLIST_FILE = SnapchatCamera/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
